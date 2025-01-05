@@ -1,4 +1,5 @@
 import { About } from "../About/About"
+import Contact from "../ContactSection/Contact"
 import { Education } from "../Education/Education"
 import Hobby from "../Hobby/Hobby"
 import Projects from "../Pojects/Projects"
@@ -13,7 +14,8 @@ export const Home = () => {
       <Education />
       <Hobby/>
       <Skills />
-      <Projects/>
+      <Projects />
+      <Contact/>
     </div>
   )
 }

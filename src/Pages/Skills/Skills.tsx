@@ -30,7 +30,7 @@ const Skills = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white p-6 md:p-10">
+    <section id="Skill" className="bg-gray-900 text-white p-6 md:p-10">
           {/* Tabs */}
     <div className="container mx-auto">
                      <h1 className="text-xl md:text-2xl font-medium uppercase ">My Skills -----------</h1>

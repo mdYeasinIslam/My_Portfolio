@@ -2,7 +2,7 @@ import { Button, ButtonGroup } from "@mui/material"
 
 export const About = () => {
   return (
-    <section className=" py-5 bg-[#111a28]  bg-gradient-to-t to-[#233450] from-[#111a28]">
+    <section id="About" className=" py-5 bg-[#111a28]  bg-gradient-to-t to-[#233450] from-[#111a28]">
       <div className="container  mx-auto flex flex-col-reverse md:grid md:grid-cols-2  text-white">
         <div className="">
              <img src="about3.jpg" className="w-2/3 md:w-full lg:w-2/3 rounded-full mx-auto" alt="" />  

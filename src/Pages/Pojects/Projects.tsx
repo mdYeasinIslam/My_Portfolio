@@ -28,20 +28,20 @@ const projects = [
 
 const Projects= () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex justify-center items-center">
+    <div id="Project" className="bg-gray-900 text-white min-h-screen flex justify-center items-center">
       <div className="container mx-auto">
          <h1 className="text-xl md:text-2xl font-medium uppercase py-3 ">Projects-----------</h1>
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
         {projects.map((project, index) => (
           <div
             key={index}
             className="bg-gray-800 rounded-lg shadow-lg "
           >
-            <div className="group overflow-hidden hover:overflow-y-scroll">
+            <div className="group w-[400px] h-[400px] overflow-hidden hover:overflow-y-scroll">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-52 object-cover transform  transition-transform duration-300"
+                className="  duration-300"
               />
              
             </div>

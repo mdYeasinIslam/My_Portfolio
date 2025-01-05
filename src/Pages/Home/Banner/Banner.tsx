@@ -4,7 +4,7 @@ import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 import { NavLink } from "react-router-dom"
 export const Banner = () => {
   return (
-    <section className="bg-gradient-to-r  to-[#526c96] from-[#111a28] ">
+    <section id="banner" className="bg-gradient-to-r  to-[#526c96] from-[#111a28] ">
         <div className="container mx-auto h-full lg:h-[34rem] grid grid-cols-1 md:grid-cols-2 relative space-y-10 py-10 md:py-0">
         <div className="md:flex items-center relative  md:left-5 lg:left-16 xl:left-2">
               <div className="text-center md:text-left  text-white space-y-5 ">
@@ -43,7 +43,14 @@ export const Banner = () => {
                         </div>
                   </div>
                   <div>
-                      <Button variant="contained" color="primary" sx={{ fontWeight: 800 }}
+              <Button
+                 onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/My_resume.pdf"; // File location in the public folder
+                link.download = "My_Resume.pdf"; // Filename when downloading
+                link.click();
+              }}
+                variant="contained" color="primary" sx={{ fontWeight: 800 }}
                           className="bg-[#0d145c] font-semibold">Get Resume</Button>
                   </div>
             </div>   
