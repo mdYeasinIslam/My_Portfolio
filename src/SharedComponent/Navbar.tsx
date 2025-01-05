@@ -21,8 +21,8 @@ export const Navbar = () => {
                 <NavLink  to={'/'} className={`flex items-center gap-1 px-3 py-1`}><IoHome/> Home</NavLink>  
                 <NavLink  to={'/projects'}className={`flex items-center gap-1 px-3 py-1`}><GrProjects className="w-3 h-3"/>Project</NavLink>  
             </ul>
-          <div>
-            <img src="" alt=""/>   
+          <div className="flex items-center gap-2">
+            <img src="/logo2.png"className="w-10 bg-black rounded-xl " alt=""/>   
             <h2 className="font-medium text-xl">M Yeasin</h2>          
           </div>
         </Box>
