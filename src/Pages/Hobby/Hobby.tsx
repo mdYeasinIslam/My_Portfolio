@@ -4,7 +4,7 @@ const Hobby = () => {
     { name: "Reading", icon: "📖" },
     { name: "Traveling", icon: "🌍" },
     { name: "Problem Solving", icon: "💻" },
-    { name: "Blogging", icon: "📝" },
+    { name: "Mobile Games", icon: "🎮"},
   ];
 
   return (

@@ -6,7 +6,7 @@ const Skills = () => {
   const categories = ["Web", "Programming", "Component_UI", "Tools"];
   const skills:any = {
     Web: [
-      { name: "HTML & CSS", level: 50 },
+      { name: "HTML & CSS", level: 60 },
       { name: "Tailwind CSS", level: 80 },
       { name: "React", level: 60 },
       { name: "Node JS", level: 35 },
@@ -32,11 +32,11 @@ const Skills = () => {
   };
 
   return (
-    <section id="Skill" className="bg-gray-900 text-white p-6 md:p-10 bg-gradient-to-l  from-black to-gray-900 ">
+    <section id="Skill" className=" bg-gray-900 text-white py-6 md:py-10 bg-gradient-to-l  from-black to-gray-900 ">
           {/* Tabs */}
     <div className="container mx-auto">
                      <h1 className="text-xl md:text-2xl font-medium uppercase ">My Skills -----------</h1>
-            <div className="flex space-x-4 mb-6">
+            <div className="flex gap-5 my-6">
                 {categories.map((category) => (
                 <button
                     key={category}

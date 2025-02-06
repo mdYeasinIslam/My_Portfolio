@@ -4,7 +4,7 @@ import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 import { Link } from "react-router-dom"
 export const Banner = () => {
   return (
-    <section id="banner" className=" bg-gradient-to-l from-black to-gray-900 ">
+    <section id="banner" className="pt-14 bg-gradient-to-l from-black to-gray-900 ">
         <div className="container mx-auto h-full lg:h-[34rem] grid grid-cols-1 md:grid-cols-2 relative space-y-10 py-10 md:py-0">
         <div className="md:flex items-center relative  md:left-5 lg:left-16 xl:left-2">
               <div className="text-center md:text-left  text-white space-y-5 ">
@@ -60,8 +60,8 @@ export const Banner = () => {
         
              <img
                 src="/myPic.png"
-                alt="Developer"
-                className="rounded-full border-2  z-10 shadow-lg shadow-gray-300 bg-[#131525]  lg:scale-75 xl:scale-90 "
+                alt="Frontend Developer"
+                className="rounded-full border-2   shadow-lg shadow-gray-300 bg-[#131525]  lg:scale-75 xl:scale-90 "
                />
       </div>
     </div>
