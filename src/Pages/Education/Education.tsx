@@ -1,7 +1,7 @@
 
 export const Education = () => {
   return (
-      <section id="Education" className="py-10 lg:py-0 bg-gray-900">
+      <section id="Education" className="py-10 lg:py-0 bg-gray-900 bg-gradient-to-l  from-black to-gray-900 ">
           <div className="container mx-auto flex flex-col md:flex-row  text-white ">
             <div className="border w-full h-full my-auto  mx-auto border-gray-900 shadow-2xl shadow-slate-800 p-3  space-y-3 ">
                   <h1 className="text-xl md:text-2xl font-medium uppercase ">Education -----------</h1>

@@ -19,7 +19,7 @@ const Contact= () => {
   ];
 
   return (
-    <section id="Contact" className="bg-gray-900 text-white py-12 px-6 md:px-20">
+    <section id="Contact" className="bg-gray-900 text-white py-12 px-6 md:px-20 bg-gradient-to-l  from-black to-gray-900 " >
       <h2 className="text-3xl font-bold text-center mb-8">Contact Information</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {contactDetails.map((contact, index) => (

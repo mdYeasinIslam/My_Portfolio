@@ -1,5 +1,5 @@
 # live site linkL:
 https://monumental-fenglisu-628daf.netlify.app
 
-# client side server:
+# github:
 https://github.com/mdYeasinIslam/My_Portfolio

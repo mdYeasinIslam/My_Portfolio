@@ -3,34 +3,36 @@ import { useState } from "react";
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState("Web");
 
-  const categories = ["Web", "Programming", "Tools", "Others"];
+  const categories = ["Web", "Programming", "Component_UI", "Tools"];
   const skills:any = {
     Web: [
-      { name: "HTML & CSS", level: 70 },
-      { name: "Tailwind CSS", level: 70 },
+      { name: "HTML & CSS", level: 50 },
+      { name: "Tailwind CSS", level: 80 },
       { name: "React", level: 60 },
-      { name: "Node JS", level: 45 },
-      { name: "Express JS", level: 45 },
+      { name: "Node JS", level: 35 },
+      { name: "Express JS", level: 35 },
       { name: "MongoDB", level: 30 },
     ],
     Programming: [
       { name: "JavaScript", level: 50 },
-      { name: "TypeScript", level: 70 },
-      { name: "C", level: 30 },
-      { name: "C++", level: 40 },
+      { name: "TypeScript", level: 40 },
+      { name: "C", level: 20 },
+      { name: "C++", level: 25 },
     ],
     Tools: [
-      { name: "Git", level: 75 }
+      { name: "Git", level: 45 },
+      { name: "GitHub", level: 55 },
+      { name: "Figma", level: 55 }
     ],
-    Others: [
-      { name: "Figma", level: 75 },
+    Component_UI: [
       { name: "Daysi UI", level: 90 },
       { name: "Meterial UI", level: 55 },
+      { name: "Shadcn UI", level: 60 }
     ],
   };
 
   return (
-    <section id="Skill" className="bg-gray-900 text-white p-6 md:p-10">
+    <section id="Skill" className="bg-gray-900 text-white p-6 md:p-10 bg-gradient-to-l  from-black to-gray-900 ">
           {/* Tabs */}
     <div className="container mx-auto">
                      <h1 className="text-xl md:text-2xl font-medium uppercase ">My Skills -----------</h1>
@@ -41,9 +43,9 @@ const Skills = () => {
                     onClick={() => setActiveCategory(category)}
                     className={`px-4 py-2 border ${
                     activeCategory === category
-                        ? "bg-green-600 text-white"
-                        : "bg-transparent text-green-400"
-                    } rounded transition duration-300`}
+                        ? "bg-[#0d145c] text-white"
+                        : "bg-transparent text-white"
+                    } rounded transition duration-300 hover:bg-[#0d145c]`}
                 >
                     {category}
                 </button>
@@ -60,7 +62,7 @@ const Skills = () => {
                     <span className="text-lg font-bold mb-2">{skill.name}</span>
                     <div className="w-full bg-gray-700 h-2 rounded overflow-hidden">
                     <div
-                        className="bg-green-500 h-full"
+                        className="bg-blue-500 h-full"
                         style={{ width: `${skill.level}%` }}
                     ></div>
                     </div>

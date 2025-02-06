@@ -6,12 +6,12 @@ import { IoMdClose } from "react-icons/io";
 import { IoHome, IoMenuSharp, IoSchoolSharp } from "react-icons/io5";
 import { RiLightbulbFlashLine } from "react-icons/ri";
 import { Link } from "react-scroll";
-
+// bg-gradient-to-t  to-[#111a28] from-[#162131] 
 
 export const Navbar = () => {
      const [menubar, setMenubar] = useState(true);
   return (
-    <Container maxWidth="xl" className="flex relative items-center justify-between py-4 bg-[#111a28] text-white bg-gradient-to-t  to-[#111a28] from-[#162131] ">
+    <Container maxWidth="xl" className="flex relative items-center justify-between py-4 bg-[#111a28] text-white   bg-gradient-to-l from-black to-gray-900 ">
       
         <Box className='flex items-center gap-2'>
             <div onClick={()=>setMenubar(!menubar)} className="flex  md:hidden" >
