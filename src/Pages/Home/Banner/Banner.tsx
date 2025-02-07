@@ -13,16 +13,15 @@ export const Banner = () => {
                             Hi, I am
                         </h3>
                         <motion.h2
-                        //    animate={{x:[0,25,0]}}
-                        //  transition={{ duration: 5, repeat: Infinity }} 
-                        className="text-[#d1d4f1] text-3xl lg:text-7xl font-semibold mb-5"
-                            >Mohammad Yeasin</motion.h2>
+                          className="text-[#d1d4f1] text-3xl lg:text-7xl font-semibold mb-5"
+                          >Mohammad Yeasin
+                        </motion.h2>
                     
                   </div>
                   <div className="space-y-5">
                       <div className="space-y-4">
                          <h1 className="text-2xl lg:text-3xl font-bold"> Frontend Developer </h1>
-                        <ul className="list-disc text-[#d1d4f1] flex justify-center items-center md:justify-start  gap-6 lg:gap-10 font-medium relative md:left-4 lg:text-xl">
+                        <ul className="xl:list-disc text-[#d1d4f1] grid grid-cols-3 xl:flex justify-center items-center md:justify-start xl:gap-10 font-medium relative xl:left-4 lg:text-xl">
                             <li>React.js</li>
                             <li>Typescript</li>
                             <li>Node JS</li>
@@ -32,27 +31,24 @@ export const Banner = () => {
                       </div>
                         <div>
                           <p className="flex justify-center items-center md:justify-start gap-2 lg:gap-5">
-                              <Button color="inherit" className="font-semibold  shadow-lg">Follow me on --------------</Button>
+                              <button color="inherit" className="font-semibold  shadow-lg">Follow me on --------------</button>
                               <Link to='https://github.com/mdYeasinIslam'><FaGithub className="w-6 h-6" /></Link>
                               <Link to="https://www.linkedin.com/in/md-yeasin-islam-1b17b3293"><FaLinkedin className="w-6 h-6"/></Link>
                                 <Link to="https://www.facebook.com/profile.php?id=100011183114419"><FaFacebook className="w-6 h-6" /></Link>
                                 <Link to="https://x.com/home?lang=en&mx=2"><FaTwitter className="w-6 h-6" /></Link>
-                              
-                                
-
                             </p>
                         </div>
                   </div>
                   <div>
-              <Button
-                 onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/My_resume.pdf"; // File location in the public folder
-                link.download = "My_Resume.pdf"; // Filename when downloading
-                link.click();
-              }}
-                variant="contained" color="primary" sx={{ fontWeight: 800 }}
-                          className="font-semibold">Get Resume</Button>
+                <Button
+                  onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = "/My_resume.pdf"; // File location in the public folder
+                  link.download = "My_Resume.pdf"; // Filename when downloading
+                  link.click();
+                }}
+                  variant="contained" color="primary" sx={{ fontWeight: 800 }}
+                  className="font-semibold">Get Resume</Button>
                   </div>
             </div>   
         </div>

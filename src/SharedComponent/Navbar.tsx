@@ -30,39 +30,32 @@ export const Navbar = () => {
                 }
           </div>
            <ul  className={`absolute  lg:hidden duration-1000  bg-[#5c6bc0] px-4 py-3 h-[80vh] gap-5 ${menubar?'left-[-200px] top-14':'top-14 left-0'}`}>
-               <Link
-                to="banner"
-                smooth={true}
-                duration={500}
-                className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-black`}><IoHome /> Home</Link>
-          
-              <Link
-                to="Project"
-                smooth={true}
-                duration={500}
-                className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-black`}><GrProjects className="w-3 h-3" />Project</Link>  
-              {/* <Link
-                to="Education"
-                  smooth={true}
-                duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-black`}><IoSchoolSharp className="w-3 h-3" />Education</Link>   */}
-                <NavLink to='#Education' >Education</NavLink>
-              <Link
-            to="Skill"
-            onClick={() => setMenubar(true)}
-                  smooth={true}
-            duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-black`}><RiLightbulbFlashLine className="w-3 h-3" />Skills</Link> 
-          
-          <NavSectionLink
-            link="Skill"
-          >
-            <RiLightbulbFlashLine className="w-3 h-3" />Skills
-          </NavSectionLink>
-              
-              <Link
-                to="Contact"
-                  smooth={true}
-                duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-black`}><FaPhoneFlip className="w-3 h-3" />Contact</Link>  
-          
+                <NavSectionLink
+                    link="banner"
+                  >
+                   <IoHome /> Home
+               </NavSectionLink>
+               <NavSectionLink
+                    link="Project"
+                  >
+                   <GrProjects className="w-3 h-3" />Project
+               </NavSectionLink>
+
+                  <NavSectionLink
+                    link="Education"
+                  >
+                    <IoSchoolSharp className="w-3 h-3" />Education
+                  </NavSectionLink>
+                  <NavSectionLink
+                    link="Skill"
+                  >
+                    <RiLightbulbFlashLine className="w-3 h-3" />Skills
+                  </NavSectionLink>
+                  <NavSectionLink
+                    link="Contact"
+                    >
+                  <FaPhoneFlip className="w-3 h-3" />Contact
+                  </NavSectionLink>
             </ul>
         <div className="flex items-center gap-2">
           <NavLink to="/" className='flex items-center gap-3'>

@@ -30,7 +30,7 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
               <h2 className="text-xl font-semibold">{project.title}</h2>
               <p className="text-sm mt-2">{project?.description.slice(0, 100)}...</p>
               <ButtonGroup className="flex flex-col gap-3">
-                  <div className="flex gap-4 w-full">
+                  <div className="flex flex-col xl:flex-row gap-4 w-full">
                       
                     <Link to={project.liveSite} className="w-full">
                         <Button variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-[#0d145c] font-semibold">Live Site</Button>

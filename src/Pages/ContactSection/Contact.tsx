@@ -1,3 +1,5 @@
+import { FormEvent } from "react";
+import toast from "react-hot-toast";
 
 const Contact= () => {
   const contactDetails = [
@@ -17,11 +19,15 @@ const Contact= () => {
       icon: "💬",
     },
   ];
-
+  const handleEmail = (e:FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    toast.success('Your message is successfully send')
+    e.currentTarget.reset()
+  }
   return (
     <section id="Contact" className="bg-gray-900 text-white py-12 px-6 md:px-20 bg-gradient-to-l  from-black to-gray-900 " >
       <h2 className="text-3xl font-bold text-center mb-8">Contact Information</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {contactDetails.map((contact, index) => (
           <a
             key={index}
@@ -39,11 +45,13 @@ const Contact= () => {
       </div>
       <div className="mt-10 text-center">
         <h3 className="text-xl font-semibold mb-4">Send Us an Email</h3>
-        <form className="max-w-lg mx-auto">
+        <form onSubmit={handleEmail} className="max-w-lg mx-auto space-y-3">
+          <input type="email" name="email" placeholder="Your Email" className="p-2 rounded-md" required />
           <textarea
             className="w-full bg-gray-800 text-white p-4 rounded-md mb-4 resize-none focus:ring-2 focus:ring-green-500"
             rows={5}
             placeholder="Write your message here..."
+            required
           ></textarea>
           <button
             type="submit"
