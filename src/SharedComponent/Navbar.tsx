@@ -5,7 +5,8 @@ import { GrProjects } from "react-icons/gr";
 import { IoMdClose } from "react-icons/io";
 import { IoHome, IoMenuSharp, IoSchoolSharp } from "react-icons/io5";
 import { RiLightbulbFlashLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 // bg-gradient-to-t  to-[#111a28] from-[#162131] 
 
 export const Navbar = () => {
@@ -32,10 +33,10 @@ export const Navbar = () => {
             className={`flex items-center gap-1 px-3 py-1`}><GrProjects className="w-3 h-3" />Project</Link>  
             </ul>
         <div className="flex items-center gap-2">
-          <Link to="/" className='flex items-center gap-3'>
+          <NavLink to="/" className='flex items-center gap-3'>
             <img src="/logo2.png"className="w-10 bg-black rounded-xl " alt=""/>   
             <h2 className="font-medium text-xl">M Yeasin</h2>          
-          </Link>
+          </NavLink>
           </div>
         </Box>
         <Box>
