@@ -10,27 +10,59 @@ import { Link } from "react-scroll";
 // bg-gradient-to-t  to-[#111a28] from-[#162131] 
 
 export const Navbar = () => {
-     const [menubar, setMenubar] = useState(true);
+  const [menubar, setMenubar] = useState(true)
+
+  const NavSectionLink = ({link, children}: {link: string, children: React.ReactNode}) => {
+    return <Link
+            to={link}
+            onClick={() => setMenubar(true)}
+                  smooth={true}
+      duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-black`}>{ children}</Link>  
+  }
+
   return (
     <Container maxWidth="xl" className="fixed z-10 flex items-center justify-between py-4 bg-[#111a28] text-white   bg-gradient-to-l from-black to-gray-900 ">
       
         <Box className='flex items-center gap-2'>
-            <div onClick={()=>setMenubar(!menubar)} className="flex  md:hidden" >
+            <div onClick={()=>setMenubar(!menubar)} className="flex  lg:hidden" >
                 {
                 menubar ?<IoMenuSharp  className="w-5 h-5"/> :<IoMdClose  className="w-5 h-5"/>
                 }
           </div>
-           <ul onClick={()=>setMenubar(true)} className={`absolute block md:hidden duration-1000  bg-[#5c6bc0] px-4 py-3 h-[50vh] gap-5 ${menubar?'left-[-200px] top-12':'top-12 left-0'}`}>
-          <Link
-            to="banner"
-              smooth={true}
-              duration={500}
-            className={`flex items-center gap-1 px-3 py-1`}><IoHome /> Home</Link>  
-          <Link
-            to="Project"
-              smooth={true}
-              duration={500}
-            className={`flex items-center gap-1 px-3 py-1`}><GrProjects className="w-3 h-3" />Project</Link>  
+           <ul  className={`absolute  lg:hidden duration-1000  bg-[#5c6bc0] px-4 py-3 h-[80vh] gap-5 ${menubar?'left-[-200px] top-14':'top-14 left-0'}`}>
+               <Link
+                to="banner"
+                smooth={true}
+                duration={500}
+                className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-black`}><IoHome /> Home</Link>
+          
+              <Link
+                to="Project"
+                smooth={true}
+                duration={500}
+                className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-black`}><GrProjects className="w-3 h-3" />Project</Link>  
+              {/* <Link
+                to="Education"
+                  smooth={true}
+                duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-black`}><IoSchoolSharp className="w-3 h-3" />Education</Link>   */}
+                <NavLink to='#Education' >Education</NavLink>
+              <Link
+            to="Skill"
+            onClick={() => setMenubar(true)}
+                  smooth={true}
+            duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-black`}><RiLightbulbFlashLine className="w-3 h-3" />Skills</Link> 
+          
+          <NavSectionLink
+            link="Skill"
+          >
+            <RiLightbulbFlashLine className="w-3 h-3" />Skills
+          </NavSectionLink>
+              
+              <Link
+                to="Contact"
+                  smooth={true}
+                duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-black`}><FaPhoneFlip className="w-3 h-3" />Contact</Link>  
+          
             </ul>
         <div className="flex items-center gap-2">
           <NavLink to="/" className='flex items-center gap-3'>
@@ -40,7 +72,7 @@ export const Navbar = () => {
           </div>
         </Box>
         <Box>
-            <ul className="hidden md:flex gap-5  ">
+            <ul className="hidden lg:flex gap-5  ">
           <Link
             to="banner"
               smooth={true}

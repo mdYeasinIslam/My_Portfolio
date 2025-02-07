@@ -36,7 +36,7 @@ const Skills = () => {
           {/* Tabs */}
     <div className="container mx-auto">
                      <h1 className="text-xl md:text-2xl font-medium uppercase ">My Skills -----------</h1>
-            <div className="flex gap-5 my-6">
+            <div className="grid md:flex gap-5 my-6">
                 {categories.map((category) => (
                 <button
                     key={category}

@@ -2,7 +2,6 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 import { forwardRef } from "react";
 import { TransitionProps } from "@mui/material/transitions";
 import { ProjectType } from "../../Types/Types";
-import { span } from "motion/react-client";
 import { Link } from "react-router-dom";
 
 const Transition = forwardRef(function Transition(
