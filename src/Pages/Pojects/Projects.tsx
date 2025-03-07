@@ -40,26 +40,26 @@ const projects: ProjectType[] = [
     github:'https://github.com/mdYeasinIslam/Bare-Blog-client'
 
   },
-  {
-    id:3,
-    title: "ReviewXP",
-    description: "This site is build for collecting reviews about Games. User can give their opition or can share their experience about different games.",
-    image: "/project/reviewXp.png", 
-      features:[
-      "Users can review each game individually.",
-      "Users can add reviews to their favorite games.",
-      "Users can save favorite reviews to their wishlist.",
-      "Dark mode functionality for a better user experience.",
-      "Comprehensive game review system with user feedback.",
-      "Personalized wishlist for saving top-rated reviews."
-    ],
-     technology: ['HTML5 & CSS', 'Tailwind css & Daiysi UI', 'React & react-router-dom', 'Typescript', 'Node.js', 'Express.js', 'Mongodb'],
-    challenges: ['Dark mode implementation','Context hook usecase','Some react packages uses such as- React-typewriter,React-fast marquee,React-tooltip etc..','Sorting and filtering reviews','Reviews updation modal handle'],
-    future_plan:['Image collect/insert from local device','Image host to the imgbb','Security inhance such as JWT , interceptor etc...'],
-    liveSite: 'https://game-reviewxp.netlify.app/',
-    github:'https://github.com/mdYeasinIslam/game-reviewXP-client'
+  // {
+  //   id:3,
+  //   title: "ReviewXP",
+  //   description: "This site is build for collecting reviews about Games. User can give their opition or can share their experience about different games.",
+  //   image: "/project/reviewXp.png", 
+  //     features:[
+  //     "Users can review each game individually.",
+  //     "Users can add reviews to their favorite games.",
+  //     "Users can save favorite reviews to their wishlist.",
+  //     "Dark mode functionality for a better user experience.",
+  //     "Comprehensive game review system with user feedback.",
+  //     "Personalized wishlist for saving top-rated reviews."
+  //   ],
+  //    technology: ['HTML5 & CSS', 'Tailwind css & Daiysi UI', 'React & react-router-dom', 'Typescript', 'Node.js', 'Express.js', 'Mongodb'],
+  //   challenges: ['Dark mode implementation','Context hook usecase','Some react packages uses such as- React-typewriter,React-fast marquee,React-tooltip etc..','Sorting and filtering reviews','Reviews updation modal handle'],
+  //   future_plan:['Image collect/insert from local device','Image host to the imgbb','Security inhance such as JWT , interceptor etc...'],
+  //   liveSite: 'https://game-reviewxp.netlify.app/',
+  //   github:'https://github.com/mdYeasinIslam/game-reviewXP-client'
 
-  },
+  // },
   {
     id:4,
     title: "OfferHaven",
@@ -73,19 +73,35 @@ const projects: ProjectType[] = [
     github:'https://github.com/mdYeasinIslam/Offer-haven-A9'
   },
   
+  // {
+  //   id:5,
+  //   title: "Adventa",
+  //   description: "This site provides tourism places related support.People can see details about top tourist places of Bangladesh and can buy packages.Also user can add their favourite tourist places. People can give their opinion about tourist area",
+  //   image: "/project/adventa.png", // Replace with your image URL
+  //   features: ["Top tourist places details of Bangladesh",'Can buy tour packages ', "People can add their favorite tourist area with details", "Everyone can give their opinion on each tourist place",'User can see reviews on each place'],
+  //    technology: ['HTML5 & CSS', 'Tailwind css & Daiysi UI', 'React.js & react-router-dom', 'Node.js', 'Express.js', 'Mongodb'],
+  //   challenges:['Collect accurate data of each place','Collection of reviews from user'],
+  //   future_plan:['Converting React.js to the React.ts','Inhance security system such as JWT, axios interceptor','Payment method implementation','Finally,providing real time services'],
+  //   liveSite: 'https://655b09c18ad8c550c822db8b--aquamarine-mochi-76b629.netlify.app/',
+  //   github:'https://github.com/mdYeasinIslam/service-review-client-'
+
+  // },
+
   {
-    id:5,
-    title: "Adventa",
-    description: "This site provides tourism places related support.People can see details about top tourist places of Bangladesh and can buy packages.Also user can add their favourite tourist places. People can give their opinion about tourist area",
-    image: "/project/adventa.png", // Replace with your image URL
-    features: ["Top tourist places details of Bangladesh",'Can buy tour packages ', "People can add their favorite tourist area with details", "Everyone can give their opinion on each tourist place",'User can see reviews on each place'],
-     technology: ['HTML5 & CSS', 'Tailwind css & Daiysi UI', 'React.js & react-router-dom', 'Node.js', 'Express.js', 'Mongodb'],
-    challenges:['Collect accurate data of each place','Collection of reviews from user'],
-    future_plan:['Converting React.js to the React.ts','Inhance security system such as JWT, axios interceptor','Payment method implementation','Finally,providing real time services'],
-    liveSite: 'https://655b09c18ad8c550c822db8b--aquamarine-mochi-76b629.netlify.app/',
-    github:'https://github.com/mdYeasinIslam/service-review-client-'
+    id:6,
+    title: "To-Do Field",
+    description: "This project is build for mantaining daily life of task. Any one can handle his daily task very smoothly by using this site. It is build on Drag-and-drop functionality. User can get better experience using drag-nd-drop on move their task easily.",
+    image: "/project/todo_field.png",
+    features: ["User can add their daily task.",'Implement drag-and-drop system so that can change task category. ', "User can update or delete their task"],
+     technology: ['HTML5 & CSS', 'Tailwind css', 'React.js & react-router-dom', 'Node.js', 'Express.js', 'Mongodb'],
+    challenges:['Implement drag-and-drop system'],
+    future_plan:['Converting JS code to the TypeScript','Add real time Re-order system'],
+    liveSite: 'https://drag-nd-drop-task.netlify.app',
+    github:'https://github.com/mdYeasinIslam/task-drag_nd_drop-client'
 
   },
+
+
 
 ];
 

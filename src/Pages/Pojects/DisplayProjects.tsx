@@ -32,10 +32,10 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
               <ButtonGroup className="flex flex-col gap-3">
                   <div className="flex flex-col xl:flex-row gap-4 w-full">
                       
-                    <Link to={project.liveSite} className="w-full">
+                    <Link target="_blank" to={project.liveSite} className="w-full">
                         <Button variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-[#0d145c] font-semibold">Live Site</Button>
                     </Link>
-                    <Link to={project.github} className="w-full">
+                    <Link target="_blank" to={project.github} className="w-full">
                     <Button variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-[#0d145c] font-semibold">GitHub</Button>
                     </Link>
                   </div>

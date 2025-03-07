@@ -43,8 +43,8 @@ export const Banner = () => {
                 <Button
                   onClick={() => {
                   const link = document.createElement("a");
-                  link.href = "/My_resume.pdf"; // File location in the public folder
-                  link.download = "My_Resume.pdf"; // Filename when downloading
+                  link.href = "/mYeasin-Resume.pdf"; // File location in the public folder
+                  link.download = "mYeasin-Resume.pdf"; // Filename when downloading
                   link.click();
                 }}
                   variant="contained" color="primary" sx={{ fontWeight: 800 }}
