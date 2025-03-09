@@ -1,6 +1,7 @@
 import {Box, Button, Container } from "@mui/material"
 import {  useState } from "react";
 import { FaPhoneFlip } from "react-icons/fa6";
+import { FcAbout } from "react-icons/fc";
 import { GrProjects } from "react-icons/gr";
 import { IoMdClose } from "react-icons/io";
 import { IoHome, IoMenuSharp, IoSchoolSharp } from "react-icons/io5";
@@ -36,21 +37,29 @@ export const Navbar = () => {
                    <IoHome /> Home
                </NavSectionLink>
                <NavSectionLink
+               link="About"
+               >
+                <FcAbout /> About
+                </NavSectionLink>
+                <NavSectionLink
+                    link="Education"
+                  >
+                    <IoSchoolSharp className="w-3 h-3" />Education
+                  </NavSectionLink>
+                  
+                 <NavSectionLink
+                    link="Skill"
+                  >
+                    <RiLightbulbFlashLine className="w-3 h-3" />Skills
+                  </NavSectionLink>        
+          
+               <NavSectionLink
                     link="Project"
                   >
                    <GrProjects className="w-3 h-3" />Project
                </NavSectionLink>
 
-                  <NavSectionLink
-                    link="Education"
-                  >
-                    <IoSchoolSharp className="w-3 h-3" />Education
-                  </NavSectionLink>
-                  <NavSectionLink
-                    link="Skill"
-                  >
-                    <RiLightbulbFlashLine className="w-3 h-3" />Skills
-                  </NavSectionLink>
+                 
                   <NavSectionLink
                     link="Contact"
                     >
@@ -71,11 +80,13 @@ export const Navbar = () => {
               smooth={true}
               duration={500}
             className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><IoHome /> Home</Link>  
-          <Link
-            to="Project"
-              smooth={true}
-            duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><GrProjects className="w-3 h-3" />Project</Link>  
           
+          <Link
+            to="About"
+              smooth={true}
+              duration={500}
+            className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><FcAbout /> About</Link>  
+         
           <Link
             to="Education"
               smooth={true}
@@ -85,6 +96,12 @@ export const Navbar = () => {
             to="Skill"
               smooth={true}
             duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><RiLightbulbFlashLine className="w-3 h-3" />Skills</Link>  
+          
+          <Link
+            to="Project"
+              smooth={true}
+            duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><GrProjects className="w-3 h-3" />Project</Link>  
+          
           
           <Link
             to="Contact"
