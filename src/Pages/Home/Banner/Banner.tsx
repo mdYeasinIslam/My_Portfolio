@@ -33,7 +33,7 @@ export const Banner = () => {
                               <p className="flex justify-center items-center md:justify-start gap-2 lg:gap-5">
                                   <button color="inherit" className="font-semibold  shadow-lg">Follow me on --------------</button>
                                   <Link to='https://github.com/mdYeasinIslam'><FaGithub className="w-6 h-6" /></Link>
-                                  <Link to="https://www.linkedin.com/in/md-yeasin-islam-1b17b3293"><FaLinkedin className="w-6 h-6"/></Link>
+                                  <Link to="https://www.linkedin.com/in/mohammad-yeasin-islam/"><FaLinkedin className="w-6 h-6"/></Link>
                                     <Link to="https://www.facebook.com/profile.php?id=100011183114419"><FaFacebook className="w-6 h-6" /></Link>
                                     <Link to="https://x.com/home?lang=en&mx=2"><FaTwitter className="w-6 h-6" /></Link>
                                 </p>
@@ -43,8 +43,8 @@ export const Banner = () => {
                     <Button
                       onClick={() => {
                       const link = document.createElement("a");
-                      link.href = "/mYeasin-Resume.pdf"; // File location in the public folder
-                      link.download = "mYeasin-Resume.pdf"; // Filename when downloading
+                      link.href = "/Yeasin-frontend_developer(resume).pdf"; // File location in the public folder
+                      link.download = "Yeasin-frontend_developer(resume).pdf"; // Filename when downloading
                       link.click();
                     }}
                       variant="contained" color="primary" sx={{ fontWeight: 800 }}

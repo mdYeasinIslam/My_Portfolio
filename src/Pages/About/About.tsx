@@ -11,10 +11,11 @@ export const About = () => {
         {/* About Content */}
         <div className="border md:w-[90%] my-auto mx-auto border-gray-900 shadow-2xl shadow-slate-800 p-3 space-y-5">
           <h1 className="text-3xl font-medium uppercase">About me -----------</h1>
-          <h1 className="text-xl text-slate-300">
-            Hello! I am <span className="font-medium underline">Mohammad Yeasin</span>, a passionate MERN Stack developer. 
-            I develop web applications. My core skill is based on JavaScript, and I love to do most things using JavaScript. 
-            I love to make the web more open to the world. I am available for any kind of job opportunity that suits my interests.
+          <h1 className=" text-slate-300">
+            Hello! I am <span className="font-medium underline">Mohammad Yeasin</span>, a passionate Frontend developer.  
+            I have dedicated my time to learning and mastering front-end technologies such as <strong>React.js</strong> along with <strong>TypeScript</strong> and modern UI frameworks like  <strong>Material UI, Shadcn-UI and Tailwind CSS</strong>.I also explore a little bit about server side technologies such as <strong>Node.js, Express.js and MongoDB</strong> I have worked on several personal projects, applying my knowledge to
+build responsive and interactive web applications. While I do not have professional work experience, I am confident in my ability to contribute effectively by writing clean, maintainable code and continuously improving
+my skills to stay updated with industry trends.
           </h1>
 
           {/* Button Group */}

@@ -17,18 +17,18 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
   };
 
   return (
-     <div className=" flex gap-5 p-3 bg-gray-800 rounded-lg shadow-lg ">
-            <div className="group w-full h-[300px] overflow-hidden hover:overflow-y-scroll">
+     <div className=" lg:flex gap-5 p-3 bg-gray-800 rounded-lg shadow-lg ">
+            <div className="group w-full h-[200px]  lg:h-[300px] overflow-hidden hover:overflow-y-scroll">
               <img
                 src={project.image}
                 alt={project.title}
-                className="  duration-300"
+                className="w-full  duration-300"
               />
              
             </div>
             <div className="w-full flex flex-col gap-3 justify-center ">
               <h2 className="text-xl font-semibold">{project.title}</h2>
-              <p className="text-sm mt-2">{project?.description.slice(0, 100)}...</p>
+              <p className="text-sm pt-2">{project?.description.slice(0, 90)}...</p>
               <ButtonGroup className="flex flex-col gap-3">
                   <div className="flex flex-col xl:flex-row gap-4 w-full">
                       

@@ -25,9 +25,11 @@ const Contact= () => {
     e.currentTarget.reset()
   }
   return (
-    <section id="Contact" className="bg-gray-900 text-white py-12 px-6 md:px-20 bg-gradient-to-l  from-black to-gray-900 " >
-      <h2 className="text-3xl font-bold text-center mb-8">Contact Information</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section id="Contact"  className="bg-gray-900 text-white py-12 px-6 md:px-20 bg-gradient-to-l  from-black to-gray-900">
+       <h2 className="text-3xl font-bold text-center mb-8 uppercase">Contact Information</h2>
+      <div className="lg:grid grid-cols-2  gap-4" >
+     
+        <div className="flex flex-col  lg:flex-col gap-6">
         {contactDetails.map((contact, index) => (
           <a
             key={index}
@@ -43,6 +45,8 @@ const Contact= () => {
           </a>
         ))}
       </div>
+    
+
       <div className="mt-10 text-center">
         <h3 className="text-xl font-semibold mb-4">Send Us an Email</h3>
         <form onSubmit={handleEmail} className="max-w-lg mx-auto space-y-3">
@@ -60,6 +64,7 @@ const Contact= () => {
             Send Email
           </button>
         </form>
+        </div>
       </div>
     </section>
   );
