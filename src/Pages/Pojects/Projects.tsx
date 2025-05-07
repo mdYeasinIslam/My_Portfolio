@@ -109,7 +109,7 @@ const Projects= () => {
   return (
     <div id="Project" className="bg-gray-900 text-white min-h-screen flex justify-center items-center bg-gradient-to-l  from-black to-gray-900 ">
       <div className="container mx-auto">
-         <h1 className="text-xl md:text-2xl font-medium uppercase py-3 ">Projects-----------</h1>
+         <h1 className="text-xl md:text-2xl font-medium uppercase py-3 ">Projects -----------</h1>
          
           <div className=" grid grid-cols-1 md:grid-cols-2 items-center lg:grid-cols-2 gap-6 ">
               {projects.map((project, index) => <DisplayProjects key={index} project={project}/>)}

@@ -21,15 +21,15 @@ export const Navbar = () => {
   }
 
   return (
-    <Container maxWidth="xl" className="fixed z-10 flex items-center justify-between py-4 bg-[#111a28] text-white   bg-gradient-to-l from-black to-gray-900 ">
-      
+    <nav  className="w-full fixed mx-auto z-10 flex items-center justify-between py-4 px-2 bg-[#111a28] text-white   bg-gradient-to-l from-black to-gray-900 ">
+      {/* mobile device */}
         <Box className='flex items-center gap-2'>
             <div onClick={()=>setMenubar(!menubar)} className="flex  lg:hidden" >
                 {
                 menubar ?<IoMenuSharp  className="w-5 h-5"/> :<IoMdClose  className="w-5 h-5"/>
                 }
           </div>
-           <ul  className={`absolute  lg:hidden duration-1000  bg-[#5c6bc0] px-4 py-3 h-[80vh] gap-5 ${menubar?'left-[-200px] top-14':'top-14 left-0'}`}>
+           <ul  className={`absolute  w-1/2 h-[100vh] lg:hidden duration-1000  bg-[#0a102e] px-4 py-3 gap-5 ${menubar?'left-[-1200px] top-14':'top-14 left-0'}`}>
                 <NavSectionLink
                     link="banner"
                   >
@@ -71,7 +71,9 @@ export const Navbar = () => {
             <h2 className="font-medium text-xl">M Yeasin</h2>          
           </Link>
           </div>
-        </Box>
+      </Box>
+
+      {/* large device */}
         <Box>
             <ul className="hidden lg:flex gap-5  ">
           <Link
@@ -108,8 +110,10 @@ export const Navbar = () => {
             duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><FaPhoneFlip className="w-3 h-3" />Contact</Link>  
           
             </ul>
-        </Box>
-        <Box>
+      </Box>
+      
+     {/* resume button */}
+      <Box>
         <Button
           onClick={() => {
             const link = document.createElement("a");
@@ -120,7 +124,7 @@ export const Navbar = () => {
           variant="contained">Get Resume</Button>
 
         </Box>
-      </Container>
+      </nav>
  
   )
 }

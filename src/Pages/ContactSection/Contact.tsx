@@ -25,8 +25,11 @@ const Contact= () => {
     e.currentTarget.reset()
   }
   return (
-    <section id="Contact"  className="bg-gray-900 text-white py-12 px-6 md:px-20 bg-gradient-to-l  from-black to-gray-900">
-       <h2 className="text-3xl font-bold text-center mb-8 uppercase">Contact Information</h2>
+    <section id="Contact" className=" bg-gray-900 text-white py-12 px-6 md:px-0 bg-gradient-to-l  from-black to-gray-900">
+      <div className="container mx-auto">
+
+     
+       <h2 className="text-2xl font-bold text-left mb-8 uppercase">Contact Information -------------</h2>
       <div className="lg:grid grid-cols-2  gap-4" >
      
         <div className="flex flex-col  lg:flex-col gap-6">
@@ -64,6 +67,7 @@ const Contact= () => {
             Send Email
           </button>
         </form>
+        </div>
         </div>
       </div>
     </section>
