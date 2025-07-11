@@ -2,8 +2,8 @@ import { Navbar } from "@/SharedComponent/Navbar";
 import "./globals.css";
 
 export const metadata = {
-  title: "My Portfolio",
-  description: "Created with Next.js",
+  title: "M Yeasin",
+  description: "Mohammad-Yeasin portfolio website",
 };
 
 export default function RootLayout({
