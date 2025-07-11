@@ -1,4 +1,5 @@
-import {Box, Button, Container } from "@mui/material"
+'use client'
+import { Box, Button, Container } from "@mui/material"
 import {  useState } from "react";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { FcAbout } from "react-icons/fc";
@@ -21,98 +22,125 @@ export const Navbar = () => {
   }
 
   return (
-    <nav  className="w-full fixed mx-auto z-10 flex items-center justify-between py-4 px-2 bg-[#111a28] text-white   bg-gradient-to-l from-black to-gray-900 ">
+    <nav className="w-full fixed mx-auto z-10 flex items-center justify-between py-4 px-2 bg-gradient-to-r text-black   from-green-100 via-blue-50 to-pink-100 ">
       {/* mobile device */}
-        <Box className='flex items-center gap-2'>
-            <div onClick={()=>setMenubar(!menubar)} className="flex  lg:hidden" >
-                {
-                menubar ?<IoMenuSharp  className="w-5 h-5"/> :<IoMdClose  className="w-5 h-5"/>
-                }
-          </div>
-           <ul  className={`absolute  w-1/2 h-[100vh] lg:hidden duration-1000  bg-[#0a102e] px-4 py-3 gap-5 ${menubar?'left-[-1200px] top-14':'top-14 left-0'}`}>
-                <NavSectionLink
-                    link="banner"
-                  >
-                   <IoHome /> Home
-               </NavSectionLink>
-               <NavSectionLink
-               link="About"
-               >
-                <FcAbout /> About
-                </NavSectionLink>
-                <NavSectionLink
-                    link="Education"
-                  >
-                    <IoSchoolSharp className="w-3 h-3" />Education
-                  </NavSectionLink>
-                  
-                 <NavSectionLink
-                    link="Skill"
-                  >
-                    <RiLightbulbFlashLine className="w-3 h-3" />Skills
-                  </NavSectionLink>        
-          
-               <NavSectionLink
-                    link="Project"
-                  >
-                   <GrProjects className="w-3 h-3" />Project
-               </NavSectionLink>
+      <Box className="flex items-center gap-2">
+        <div onClick={() => setMenubar(!menubar)} className="flex  lg:hidden">
+          {menubar ? (
+            <IoMenuSharp className="w-5 h-5" />
+          ) : (
+            <IoMdClose className="w-5 h-5" />
+          )}
+        </div>
+        <ul
+          className={`absolute  w-1/2 h-[100vh] lg:hidden duration-1000  px-4 py-3 gap-5 ${
+            menubar
+              ? "left-[-500px] top-14 "
+              : "top-16 left-0 bg-gradient-to-r text-black   from-green-100 via-blue-50 to-pink-100 "
+          }`}
+        >
+          <NavSectionLink link="banner">
+            <IoHome /> Home
+          </NavSectionLink>
+          <NavSectionLink link="About">
+            <FcAbout /> About
+          </NavSectionLink>
+          <NavSectionLink link="Education">
+            <IoSchoolSharp className="w-3 h-3" />
+            Education
+          </NavSectionLink>
 
-                 
-                  <NavSectionLink
-                    link="Contact"
-                    >
-                  <FaPhoneFlip className="w-3 h-3" />Contact
-                  </NavSectionLink>
-            </ul>
+          <NavSectionLink link="Skill">
+            <RiLightbulbFlashLine className="w-3 h-3" />
+            Skills
+          </NavSectionLink>
+
+          <NavSectionLink link="Project">
+            <GrProjects className="w-3 h-3" />
+            Project
+          </NavSectionLink>
+
+          <NavSectionLink link="Contact">
+            <FaPhoneFlip className="w-3 h-3" />
+            Contact
+          </NavSectionLink>
+        </ul>
         <div className="flex items-center gap-2">
-          <Link to="banner" className='flex items-center gap-3'>
-            <img src="/logo2.png"className="w-10 bg-black rounded-xl " alt=""/>   
-            <h2 className="font-medium text-xl">M Yeasin</h2>          
+          <Link to="banner" className="flex items-center gap-3">
+            <img
+              src="/logo2.png"
+              className="w-10 bg-black rounded-xl "
+              alt=""
+            />
+            <h2 className="font-medium text-xl">M Yeasin</h2>
           </Link>
-          </div>
+        </div>
       </Box>
 
       {/* large device */}
-        <Box>
-            <ul className="hidden lg:flex gap-5  ">
+      <Box>
+        <ul className="hidden lg:flex gap-5  ">
           <Link
             to="banner"
-              smooth={true}
-              duration={500}
-            className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><IoHome /> Home</Link>  
-          
+            smooth={true}
+            duration={500}
+            className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}
+          >
+            <IoHome /> Home
+          </Link>
+
           <Link
             to="About"
-              smooth={true}
-              duration={500}
-            className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><FcAbout /> About</Link>  
-         
+            smooth={true}
+            duration={500}
+            className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}
+          >
+            <FcAbout /> About
+          </Link>
+
           <Link
             to="Education"
-              smooth={true}
-            duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><IoSchoolSharp className="w-3 h-3" />Education</Link>  
-          
+            smooth={true}
+            duration={500}
+            className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}
+          >
+            <IoSchoolSharp className="w-3 h-3" />
+            Education
+          </Link>
+
           <Link
             to="Skill"
-              smooth={true}
-            duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><RiLightbulbFlashLine className="w-3 h-3" />Skills</Link>  
-          
+            smooth={true}
+            duration={500}
+            className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}
+          >
+            <RiLightbulbFlashLine className="w-3 h-3" />
+            Skills
+          </Link>
+
           <Link
             to="Project"
-              smooth={true}
-            duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><GrProjects className="w-3 h-3" />Project</Link>  
-          
-          
+            smooth={true}
+            duration={500}
+            className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}
+          >
+            <GrProjects className="w-3 h-3" />
+            Project
+          </Link>
+
           <Link
             to="Contact"
-              smooth={true}
-            duration={500} className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}><FaPhoneFlip className="w-3 h-3" />Contact</Link>  
-          
-            </ul>
+            smooth={true}
+            duration={500}
+            className={`flex items-center gap-1 px-3 py-1 cursor-pointer hover:text-slate-500`}
+          >
+            <FaPhoneFlip className="w-3 h-3" />
+            Contact
+          </Link>
+        </ul>
       </Box>
-      
-     {/* resume button */}
+
+      {/* resume button */}
       <Box>
         <Button
           onClick={() => {
@@ -121,10 +149,12 @@ export const Navbar = () => {
             link.download = "Yeasin-frontend_developer(resume).pdf"; // Filename when downloading
             link.click();
           }}
-          variant="contained">Get Resume</Button>
-
-        </Box>
-      </nav>
- 
-  )
+          variant="contained"
+          className="bg-green-500 hover:bg-green-700 duration-500 font-semibold"
+        >
+          Get Resume
+        </Button>
+      </Box>
+    </nav>
+  );
 }
