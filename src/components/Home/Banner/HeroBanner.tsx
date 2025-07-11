@@ -1,14 +1,10 @@
 "use client";
 
-import { Box, Button } from "@mui/material";
+import {  Button } from "@mui/material";
 import {
-  Play,
   ArrowRight,
   Plus,
-  Instagram,
-  Linkedin,
   Twitter,
-  Facebook,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa6";
