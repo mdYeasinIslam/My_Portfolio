@@ -5,7 +5,12 @@ const Skills = () => {
   const [activeCategory, setActiveCategory] = useState("Web");
 
   const categories = ["Web", "Programming", "Component_UI", "Tools"];
-  const skills:any = {
+  type Skill = { name: string; level: number };
+  type SkillsByCategory = {
+    [key: string]: Skill[];
+  };
+
+  const skills: SkillsByCategory = {
     Web: [
       { name: "HTML & CSS", level: 60 },
       { name: "Tailwind CSS", level: 80 },
@@ -62,20 +67,22 @@ const Skills = () => {
 
         {/* Skills */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {skills[activeCategory].map((skill: any, index: number) => (
-            <div
-              key={index}
-              className="bg-gray-800 p-4 rounded shadow-md flex flex-col"
-            >
-              <span className="text-lg font-bold mb-2">{skill.name}</span>
-              <div className="w-full bg-gray-700 h-2 rounded overflow-hidden">
-                <div
-                  className="bg-blue-500 h-full"
-                  style={{ width: `${skill.level}%` }}
-                ></div>
+          {skills[activeCategory].map(
+            (skill: Skill, index: number) => (
+              <div
+                key={index}
+                className="bg-gray-800 text-white p-4 rounded shadow-md flex flex-col"
+              >
+                <span className="text-lg font-bold mb-2">{skill.name}</span>
+                <div className="w-full bg-gray-700 h-2 rounded overflow-hidden">
+                  <div
+                    className="bg-blue-500 h-full"
+                    style={{ width: `${skill.level}%` }}
+                  ></div>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
     </section>

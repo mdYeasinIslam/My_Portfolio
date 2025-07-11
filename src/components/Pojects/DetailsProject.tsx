@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Transition = forwardRef(function Transition(
   props: TransitionProps & {
-    children: React.ReactElement<any, any>;
+    children: React.ReactElement;
   },
   ref: React.Ref<unknown>,
 ) {
