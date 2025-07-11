@@ -2,6 +2,7 @@
 import { Button, ButtonGroup } from "@mui/material";
 import { Link } from "react-scroll";
 import { BsStars } from "react-icons/bs";
+import Image from "next/image";
 
 export const About = () => {
   return (
@@ -9,11 +10,13 @@ export const About = () => {
       id="About"
       className="py-20 bg-gradient-to-r from-green-100 via-blue-50 to-pink-100"
     >
-      <div className="container mx-auto flex px-4 md:px-0 lg:px-8 gap-5 flex-col-reverse md:flex-row-reverse items-center text-white">
+      <div className="container mx-auto flex px-4 md:px-2 lg:px-8 gap-5 flex-col-reverse md:flex-row-reverse items-center text-white">
         {/* Image Section */}
-        <img
-          src="about3.jpg"
-          className="w-3/4 md:w-2/4  lg:w-2/5 rounded-full mx-auto"
+        <Image
+          src="/about/about1.jpg"
+          width={500}
+          height={500}
+          className="w-full md:w-2/4 rounded-xl mx-auto"
           alt="About Me"
         />
 

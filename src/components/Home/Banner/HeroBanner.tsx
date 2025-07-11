@@ -26,7 +26,7 @@ export default function HeroBanner() {
   }, [roles.length]);
 
   return (
-    <section className="  min-h-screen overflow-hidden bg-gradient-to-r from-green-100 via-blue-50 to-pink-100">
+    <section id="banner" className="  min-h-screen overflow-hidden bg-gradient-to-r from-green-100 via-blue-50 to-pink-100">
       <div className="container mx-auto relative  p-0">
         {/* Social Media Icons - Left Side */}
         <div className="absolute  -left-80 md:left-6 lg:left-1 top-[25%] lg:top-1/2 transform -translate-y-1/2 flex flex-col gap-16 ">
