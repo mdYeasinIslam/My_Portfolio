@@ -4,7 +4,8 @@ import { useState } from "react";
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState("Web");
 
-  const categories = ["Web", "Programming", "Component_UI", "Tools"];
+  type Category = "Web" | "Programming" | "Component_UI" | "Tools";
+  const categories: Category[] = ["Web", "Programming", "Component_UI", "Tools"];
   type Skill = { name: string; level: number };
   type SkillsByCategory = {
     [key: string]: Skill[];
@@ -54,10 +55,10 @@ const Skills = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 border ${
+              className={`px-4 py-2 border  ${
                 activeCategory === category
                   ? "bg-[#0d145c] text-white"
-                  : "bg-transparent text-white"
+                  : "bg-transparent border-black hover:text-white text-black"
               } rounded transition duration-300 hover:bg-[#0d145c]`}
             >
               {category}
@@ -69,14 +70,14 @@ const Skills = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {skills[activeCategory].map(
             (skill: Skill, index: number) => (
-              <div
+              <div 
                 key={index}
-                className="bg-gray-800 text-white p-4 rounded shadow-md flex flex-col"
+                className="bg-white text-black p-4 rounded shadow-md flex flex-col"
               >
                 <span className="text-lg font-bold mb-2">{skill.name}</span>
-                <div className="w-full bg-gray-700 h-2 rounded overflow-hidden">
+                <div className="w-full bg-gray-300 h-2 rounded overflow-hidden">
                   <div
-                    className="bg-blue-500 h-full"
+                    className="bg-pink-500 h-full"
                     style={{ width: `${skill.level}%` }}
                   ></div>
                 </div>
