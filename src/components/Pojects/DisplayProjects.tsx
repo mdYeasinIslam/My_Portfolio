@@ -18,7 +18,7 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
   };
 
   return (
-     <div className=" lg:flex gap-5 p-3 bg-gray-800 rounded-lg shadow-lg ">
+     <div className=" lg:flex gap-5 p-3 bg-white rounded-lg shadow-lg ">
             <div className="group w-full h-[200px]  lg:h-[300px] overflow-hidden hover:overflow-y-scroll">
               <img
                 src={project.image}
@@ -34,14 +34,14 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
                   <div className="flex flex-col xl:flex-row gap-4 w-full">
                       
                     <Link target="_blank" href={project.liveSite} className="w-full">
-                        <Button variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-[#0d145c] font-semibold">Live Site</Button>
+                        <Button variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-green-600 font-semibold">Live Site</Button>
                     </Link>
                     <Link target="_blank" href={project.github} className="w-full">
-                    <Button variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-[#0d145c] font-semibold">GitHub</Button>
+                    <Button variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-green-600 font-semibold">GitHub</Button>
                     </Link>
                   </div>
                 {/* <Link to={`/project/${project?.id}`} className="w-full"> */}
-                    <Button onClick={handleClickOpen} variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-[#0d145c] font-semibold">View Details</Button>
+                    <Button onClick={handleClickOpen} variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-green-600 font-semibold">View Details</Button>
                   {/* </Link> */}
               </ButtonGroup>
             </div>
