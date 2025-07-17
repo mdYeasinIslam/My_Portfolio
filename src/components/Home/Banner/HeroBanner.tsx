@@ -11,7 +11,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export default function HeroBanner() {
   const [currentRole, setCurrentRole] = useState(0);
-  const roles = ["Frontend Developer", "React Developer", "Next.js Developer"];
+  const roles = ["Frontend Developer", "React.js Developer", "Next.js Developer"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -98,7 +98,7 @@ export default function HeroBanner() {
         </div>
 
         {/* Main Content */}
-        <div className="container mx-auto pt-24 lg:py-24 flex items-center min-h-screen">
+        <div className="container mx-auto px-1 md:px-8 pt-24 lg:py-24 flex items-center min-h-screen">
           <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 lg:gap-0 xl:gap-12 md:items-center w-full">
             {/* Left Side - Image */}
             <div className="relative">
@@ -132,7 +132,7 @@ export default function HeroBanner() {
             {/* Right Side - Content */}
             <div className="space-y-8">
               {/* Hey There Badge */}
-              <div className="flex items-center space-x-2 animate-fade-in">
+              <div className="flex  items-center space-x-2 animate-fade-in">
                 <Plus
                   className="w-5 h-5 text-green-500 animate-spin"
                   style={{ animationDuration: "3s" }}
@@ -142,7 +142,7 @@ export default function HeroBanner() {
 
               {/* Main Heading */}
               <div className="space-y-2">
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight animate-fade-in-up">
+                <h1 className="text-5xl  lg:text-6xl font-bold text-gray-900 leading-tight animate-fade-in-up">
                   I'm Mohammad Yeasin
                 </h1>
 
