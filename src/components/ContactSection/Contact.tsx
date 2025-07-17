@@ -39,7 +39,7 @@ const Contact= () => {
             {contactDetails.map((contact, index) => (
               <a
                 key={index}
-                className="flex items-center space-x-4  bg-white hover:bg-gray-700 hover:text-white transition duration-300 p-6 rounded-md shadow-lg"
+                className="flex items-center space-x-4  bg-white  transition duration-300 p-6 rounded-md shadow-lg"
                 target="_blank"
                 rel="noopener noreferrer"
               >
