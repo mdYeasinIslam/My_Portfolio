@@ -173,7 +173,7 @@ const Projects = () => {
   return (
     <div
       id="Project"
-      className=" min-h-screen flex justify-center items-center bg-gradient-to-r from-pink-100 via-blue-50 to-green-100  text-black "
+      className=" min-h-screen flex justify-center items-center bg-gradient-to-r from-pink-100 via-blue-50 to-green-100  text-black py-10"
     >
       <div className="container mx-auto">
         <h1 className="text-xl md:text-2xl font-medium uppercase py-3 ">

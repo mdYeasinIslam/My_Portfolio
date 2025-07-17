@@ -74,13 +74,13 @@ export const Navbar = () => {
       <Box className="flex items-center gap-2">
         <div onClick={() => setMenubar(!menubar)} className="flex lg:hidden">
           {menubar ? (
-            <IoMenuSharp className="w-5 h-5" />
+            <IoMenuSharp className="w-7 h-7" />
           ) : (
-            <IoMdClose className="w-5 h-5" />
+            <IoMdClose className="w-7 h-7" />
           )}
         </div>
         <ul
-          className={`absolute w-1/2 h-[100vh] lg:hidden duration-1000 px-4 py-3 gap-5 ${
+          className={`absolute w-2/3 md:w-1/2  lg:hidden duration-1000 px-4 py-5 flex flex-col gap-5 ${
             menubar
               ? "left-[-500px] top-14"
               : "top-16 left-0 bg-gradient-to-r text-black from-green-100 via-blue-50 to-pink-100"
@@ -91,7 +91,7 @@ export const Navbar = () => {
               key={link}
               link={link}
               onClick={() => setMenubar(true)}
-              className="hover:text-black"
+              className="bg-green-200 rounded-md py-2 text-lg font-medium  hover:text-black"
             >
               {icon} {label}
             </NavSectionLink>
@@ -107,7 +107,7 @@ export const Navbar = () => {
 
       {/* Large device */}
       <Box>
-        <ul className="hidden lg:flex gap-5">
+        <ul className="hidden lg:flex xl:gap-5">
           {navItems.map(({ link, label, icon }) => (
             <NavSectionLink
               key={link}
