@@ -1,5 +1,4 @@
 'use client'
-import { Button, ButtonGroup } from "@mui/material";
 import { ProjectType } from "../../Types/Types";
 import { DetailsProject } from "./DetailsProject";
 import { useState } from "react";
@@ -30,20 +29,20 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
             <div className="w-full flex flex-col gap-3 justify-center ">
               <h2 className="text-xl font-semibold">{project.title}</h2>
               <p className="text-sm pt-2">{project?.description.slice(0, 90)}...</p>
-              <ButtonGroup className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3">
                   <div className="flex flex-col xl:flex-row gap-4 w-full">
                       
                     <Link target="_blank" href={project.liveSite} className="w-full">
-                        <Button variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-green-600 font-semibold">Live Site</Button>
+                        <button    className="w-full py-1 bg-green-600 font-medium rounded-lg text-white">Live Site</button>
                     </Link>
                     <Link target="_blank" href={project.github} className="w-full">
-                    <Button variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-green-600 font-semibold">GitHub</Button>
+                    <button    className="w-full py-1 bg-green-600 font-medium rounded-lg text-white">GitHub</button>
                     </Link>
                   </div>
                 {/* <Link to={`/project/${project?.id}`} className="w-full"> */}
-                    <Button onClick={handleClickOpen} variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-green-600 font-semibold">View Details</Button>
+                    <button onClick={handleClickOpen}    className="w-full py-1 bg-green-600 font-medium rounded-lg text-white">View Details</button>
                   {/* </Link> */}
-              </ButtonGroup>
+              </div>
             </div>
             {
               open &&  <DetailsProject open={open} handleClose={handleClose} project={project} />
