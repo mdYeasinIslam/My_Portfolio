@@ -1,5 +1,5 @@
 "use client";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import { useState } from "react";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { FcAbout } from "react-icons/fc";
@@ -122,13 +122,12 @@ export const Navbar = () => {
 
       {/* Resume button */}
       <Box>
-        <Button
+        <button
           onClick={handleResumeDownload}
-          variant="contained"
-          className="bg-green-500 hover:bg-green-700 duration-500 font-semibold"
+          className="bg-green-500 hover:bg-green-700 text-white px-3 py-2 rounded-lg duration-500 font-semibold"
         >
           Get Resume
-        </Button>
+        </button>
       </Box>
     </nav>
   );

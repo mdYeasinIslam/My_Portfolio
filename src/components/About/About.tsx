@@ -1,5 +1,4 @@
 "use client";
-import { Button, ButtonGroup } from "@mui/material";
 import { Link } from "react-scroll";
 import { BsStars } from "react-icons/bs";
 import Image from "next/image";
@@ -54,26 +53,22 @@ export const About = () => {
           </h1> */}
 
           {/* Button Group */}
-          <ButtonGroup className="flex gap-5 md:space-x-5 ">
+          <div className="flex gap-5 md:space-x-5 ">
             <Link to="Contact" smooth={true} duration={500}>
-              <Button
-                variant="contained"
-                sx={{ fontWeight: 800 }}
-                className="bg-green-600 hover:bg-green-800 font-semibold"
+              <button
+                className="bg-green-600 hover:bg-green-800 font-semibold  px-4 py-1 rounded-lg text-white"
               >
                 Contact Me
-              </Button>
+              </button>
             </Link>
             <Link to="Skill" smooth={true} duration={500}>
-              <Button
-                variant="contained"
-                sx={{ fontWeight: 800 }}
-                className="bg-green-600 hover:bg-green-800 font-semibold"
+              <button
+                className="bg-green-600 hover:bg-green-800 font-semibold px-4 py-1 rounded-lg text-white"
               >
                 My Skills
-              </Button>
+              </button>
             </Link>
-          </ButtonGroup>
+          </div>
         </div>
       </div>
     </section>

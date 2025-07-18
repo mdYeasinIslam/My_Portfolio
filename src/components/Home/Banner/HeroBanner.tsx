@@ -1,6 +1,5 @@
 "use client";
 
-import {  Button } from "@mui/material";
 import {
   ArrowRight,
   Plus,
@@ -176,19 +175,18 @@ export default function HeroBanner() {
               </ul>
               {/* Buttons */}
               <div className="flex items-center space-x-6 animate-fade-in-up delay-500">
-                <Button
+                <button
                   onClick={() => {
                     const link = document.createElement("a");
                     link.href = "/Yeasin-frontend_developer(resume).pdf"; // File location in the public folder
                     link.download = "Yeasin-frontend_developer(resume).pdf"; // Filename when downloading
                     link.click();
                   }}
-                  variant="contained"
                   className="bg-green-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 hover:scale-105 transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl"
                 >
-                  <span className="text-lg"> Get Resume</span>
+                  <span className="text-xl"> Get Resume</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />{" "}
-                </Button>
+                </button>
               </div>
             </div>
           </div>
