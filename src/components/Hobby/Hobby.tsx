@@ -19,7 +19,7 @@ const Hobby = () => {
       id="hobby"
       className="bg-gradient-to-r from-pink-100 via-blue-50 to-green-100  text-white py-20 px-6 "
     >
-      <div className="container mx-auto px-0  space-y-10">
+      <div className="container mx-auto   space-y-10">
         <div className="flex items-center gap-5">
           <div className="rotate-0 text-black text-2xl font-bold tracking-wider flex items-center gap-4">
             <PiShootingStarBold className="text-green-600"/>

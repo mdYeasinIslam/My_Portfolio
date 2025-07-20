@@ -123,6 +123,7 @@ export const Navbar = () => {
       {/* Resume button */}
       <Box>
         <button
+          title="Download My Resume"
           onClick={handleResumeDownload}
           className="bg-green-500 hover:bg-green-700 text-white px-3 py-2 rounded-lg duration-500 font-semibold"
         >

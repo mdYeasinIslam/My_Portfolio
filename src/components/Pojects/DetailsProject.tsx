@@ -12,7 +12,7 @@ const Transition = forwardRef(function Transition(
   ref: React.Ref<unknown>,
 ) {
   return <Slide direction="up" ref={ref} {...props} />;
-});
+}); 
 type Prop = {
   open: boolean
   handleClose: () => void
@@ -49,7 +49,7 @@ export const DetailsProject = ({open,handleClose,project}:Prop) => {
       
         <DialogActions>
           <Button variant="contained" onClick={handleClose}>Close</Button>
-           <Link to={project.liveSite} className="w-full">
+           <Link to={project?.liveSite} className="w-full">
               <Button variant="contained" color="primary" sx={{ fontWeight: 800 }} className="w-full bg-[#0d145c] font-semibold">Live Site</Button>
           </Link>
           <Link to={project.github} className="w-full">

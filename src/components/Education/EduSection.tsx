@@ -1,4 +1,5 @@
 import { GraduationCap, Palette, Monitor } from "lucide-react";
+import { LuAlignStartVertical } from "react-icons/lu";
 
 const educationData = [
   {
@@ -32,16 +33,19 @@ const educationData = [
     position: "right",
   },
 ];
-  
 
 export default function zEduSection() {
   return (
-      <section className="py-16 px-4 bg-green-100">
-          <h1 className="text-center pb-10 text-3xl font-semibold">EDUCATION</h1>
+    <section className="py-16 px-4 bg-green-100">
+      <h1 className="flex items-center justify-center gap-3 pb-10 text-3xl font-semibold">
+        {" "}
+        <LuAlignStartVertical className="text-green-800" />
+        <span>Education</span>
+      </h1>
       <div className="max-w-6xl mx-auto">
         <div className="relative">
           {/* Vertical Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-green-400 h-full"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-green-800 h-full"></div>
 
           {/* Timeline Items */}
           <div className="space-y-16">
@@ -137,7 +141,7 @@ export default function zEduSection() {
 
           {/* Timeline End Dot */}
           <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0">
-            <div className="w-4 h-4 bg-teal-400 rounded-full"></div>
+            <div className="w-4 h-4 bg-green-700 rounded-full"></div>
           </div>
         </div>
       </div>

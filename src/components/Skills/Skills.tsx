@@ -1,11 +1,18 @@
-'use client'
+"use client";
 import { useState } from "react";
+import { BsStars } from "react-icons/bs";
+import SkillsCard from "./SkillsCard";
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState("Web");
 
   type Category = "Web" | "Programming" | "Component_UI" | "Tools";
-  const categories: Category[] = ["Web", "Programming", "Component_UI", "Tools"];
+  const categories: Category[] = [
+    "Web",
+    "Programming",
+    "Component_UI",
+    "Tools",
+  ];
   type Skill = { name: string; level: number };
   type SkillsByCategory = {
     [key: string]: Skill[];
@@ -31,12 +38,12 @@ const Skills = () => {
     Tools: [
       { name: "Git", level: 45 },
       { name: "GitHub", level: 55 },
-      { name: "Figma", level: 55 }
+      { name: "Figma", level: 55 },
     ],
     Component_UI: [
       { name: "Daysi UI", level: 90 },
       { name: "Meterial UI", level: 55 },
-      { name: "Shadcn UI", level: 60 }
+      { name: "Shadcn UI", level: 60 },
     ],
   };
 
@@ -46,9 +53,11 @@ const Skills = () => {
       className="   py-6 md:py-10 bg-gradient-to-r from-pink-100 via-blue-50 to-green-100  text-black "
     >
       {/* Tabs */}
-      <div className="container mx-auto">
-        <h1 className="text-xl md:text-2xl font-medium uppercase ">
-          My Skills -----------
+      <div className="container mx-auto ">
+        <h1 className="text-xl md:text-3xl font-medium flex items-center gap-2 uppercase py-3">
+          <BsStars className="text-green-600" />
+          <span>Skills </span>
+          <span className="w-20 md:w-28 lg:w-40 border border-black"></span>
         </h1>
         <div className="grid md:flex gap-5 my-6">
           {categories.map((category) => (
@@ -67,23 +76,8 @@ const Skills = () => {
         </div>
 
         {/* Skills */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {skills[activeCategory].map(
-            (skill: Skill, index: number) => (
-              <div 
-                key={index}
-                className="bg-white text-black p-4 rounded shadow-md flex flex-col"
-              >
-                <span className="text-lg font-bold mb-2">{skill.name}</span>
-                <div className="w-full bg-gray-300 h-2 rounded overflow-hidden">
-                  <div
-                    className="bg-green-500 h-full"
-                    style={{ width: `${skill.level}%`}}
-                  ></div>
-                </div>
-              </div>
-            )
-          )}
+        <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-4">
+          {skills[activeCategory].map((skill: Skill, index: number) => <SkillsCard  key={index} skill={skill}/>)}
         </div>
       </div>
     </section>
@@ -91,4 +85,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
