@@ -1,6 +1,7 @@
 'use client'
-import { FormEvent } from "react";
+import { FormEvent, useRef } from "react";
 import toast from "react-hot-toast";
+import emailjs from "emailjs-com";
 
 const contactDetails = [
   {
@@ -19,11 +20,33 @@ const contactDetails = [
     icon: "💬",
   },
 ];
-const Contact= () => {
+const Contact = () => {
+  const form = useRef<HTMLFormElement>(null)
+
   const handleEmail = (e:FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    toast.success('Your message is successfully send')
-    e.currentTarget.reset()
+    console.log('clicked')
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_6jgxduc",
+          "template_bevmnal",
+          form.current,
+          "bWoaOSVfoucQDvqz0"
+        )
+        .then((result) => {
+          toast.success("Message sent successfully!");
+          console.log(result)
+          e.currentTarget.reset();
+        })
+        .catch((error) => {
+          toast.error("Failed to send message!");
+          console.log(error.text);
+        });
+     
+    } else {
+      toast.error('Form reference is not available');
+    }
   }
   return (
     <section
@@ -46,7 +69,7 @@ const Contact= () => {
                 <div className="text-green-500 text-3xl">{contact.icon}</div>
                 <div>
                   <h3 className="text-lg font-semibold">{contact.type}</h3>
-                  <p className="text-sm text-gray-400">{contact.value}</p>
+                  <p className="text-sm text-gray-700">{contact.value}</p>
                 </div>
               </a>
             ))}
@@ -54,7 +77,13 @@ const Contact= () => {
 
           <div className="mt-10 text-center">
             <h3 className="text-xl font-semibold mb-4">Send Us an Email</h3>
-            <form onSubmit={handleEmail} className="max-w-lg mx-auto space-y-3">
+            <form
+              onSubmit={handleEmail}
+              ref={form}
+              // action="https://formsubmit.co/hyeasinislam@gmail.com"
+              // method="POST"
+              className="max-w-lg mx-auto space-y-3"
+            >
               <input
                 type="email"
                 name="email"
@@ -65,6 +94,7 @@ const Contact= () => {
               <textarea
                 className="w-full bg-white text-black p-4 rounded-md mb-4 resize-none focus:ring-2 focus:ring-green-500"
                 rows={5}
+                name="message"
                 placeholder="Write your message here..."
                 required
               ></textarea>

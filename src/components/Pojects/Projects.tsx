@@ -1,3 +1,4 @@
+import { BsStars } from "react-icons/bs";
 import { ProjectType } from "../../Types/Types";
 import { DisplayProjects } from "./DisplayProjects";
 
@@ -176,8 +177,11 @@ const Projects = () => {
       className=" min-h-screen flex justify-center items-center bg-gradient-to-r from-pink-100 via-blue-50 to-green-100  text-black py-10"
     >
       <div className="container mx-auto">
-        <h1 className="text-xl md:text-2xl font-medium uppercase py-3 ">
-          Projects -----------
+       
+        <h1 className="text-xl md:text-3xl font-medium flex items-center gap-2 uppercase py-3">
+          <BsStars className="text-green-600" />
+          <span>Projects </span>
+          <span className="w-20 md:w-28 lg:w-40 border border-black"></span>
         </h1>
 
         <div className=" grid grid-cols-1 md:grid-cols-2 items-center lg:grid-cols-2 gap-6 ">
