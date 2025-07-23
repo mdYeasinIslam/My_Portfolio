@@ -83,7 +83,7 @@ export default function zEduSection() {
                     ) : (
                       // Description on left when content is on right
                       <div className="pr-8">
-                        <p className="text-slate-700 leading-relaxed">
+                        <p className="text-slate-700 leading-relaxed text-start">
                           {item.description}
                         </p>
                       </div>
@@ -109,7 +109,7 @@ export default function zEduSection() {
                     ) : (
                       // Description on right when content is on left
                       <div className="pl-8">
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="text-gray-700 leading-relaxed text-start">
                           {item.description}
                         </p>
                       </div>
