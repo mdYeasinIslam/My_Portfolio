@@ -42,7 +42,7 @@ export default function EduSection() {
           <LuAlignStartVertical className="text-green-800" />
           <span>Education</span>
         </div>
-        <div className="">
+        <div>
           <div className="relative">
             {/* Vertical Timeline Line */}
             <div className="absolute left-10 lg:left-0 transform -translate-x-1/2 w-1 bg-green-800 h-full"></div>
@@ -139,6 +139,9 @@ export default function EduSection() {
             <div className="absolute left-0 transform -translate-x-1/2 bottom-0">
               <div className="w-4 h-4 bg-green-700 rounded-full"></div>
             </div>
+          </div>
+          <div>
+            CERTIFICATION
           </div>
         </div>
       </div>

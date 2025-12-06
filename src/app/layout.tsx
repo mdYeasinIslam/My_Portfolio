@@ -1,8 +1,9 @@
 import { Navbar } from "@/SharedComponent/Navbar";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata : Metadata = {
   title: "M Yeasin",
   description: "Mohammad-Yeasin portfolio website",
 };
