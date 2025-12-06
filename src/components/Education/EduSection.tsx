@@ -1,4 +1,5 @@
 import { GraduationCap, Monitor } from "lucide-react";
+import { GrCertificate } from "react-icons/gr";
 import { LuAlignStartVertical } from "react-icons/lu";
 
 const educationData = [
@@ -42,8 +43,8 @@ export default function EduSection() {
           <LuAlignStartVertical className="text-green-800" />
           <span>Education</span>
         </div>
-        <div>
-          <div className="relative">
+        <div className="grid grid-cols-5 gap-5">
+          <div className="col-span-3 relative">
             {/* Vertical Timeline Line */}
             <div className="absolute left-10 lg:left-0 transform -translate-x-1/2 w-1 bg-green-800 h-full"></div>
 
@@ -140,8 +141,16 @@ export default function EduSection() {
               <div className="w-4 h-4 bg-green-700 rounded-full"></div>
             </div>
           </div>
-          <div>
-            CERTIFICATION
+          <div className="w-full">
+            <div className="w-full p-2 lg:p-4 xl:p-6 rounded-xl md:rounded-2xl border border-gray-200 shadow-sm hover:shadow transition">
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl mb-4">
+                <GrCertificate className="w-6 h-6 text-black" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Web development
+              </h3>
+              <p className="text-sm text-gray-500">Online Platform</p>
+            </div>
           </div>
         </div>
       </div>
