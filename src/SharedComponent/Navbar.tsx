@@ -11,28 +11,28 @@ import { Link } from "react-scroll";
 import { RxHobbyKnife } from "react-icons/rx";
 
 const navItems = [
-  { link: "banner", label: "Home", icon: <IoHome /> },
-  { link: "About", label: "About", icon: <FcAbout /> },
+  { link: "banner", label: "Home", icon: <IoHome className="-mt-0.5"/> },
+  { link: "About", label: "About", icon: <FcAbout className="-mt-0.5"/> },
   {
     link: "Education",
     label: "Education",
-    icon: <IoSchoolSharp />,
+    icon: <IoSchoolSharp className="-mt-0.5"/>,
   },
-  { link: "hobby", label: "Hobby", icon: <RxHobbyKnife /> },
+  { link: "hobby", label: "Hobby", icon: <RxHobbyKnife className="-mt-0.5" /> },
   {
     link: "Skill",
     label: "Skills",
-    icon: <RiLightbulbFlashLine />,
+    icon: <RiLightbulbFlashLine className="-mt-0.5" />,
   },
   {
     link: "Project",
     label: "Project",
-    icon: <GrProjects />,
+    icon: <GrProjects className="w-3 h-3 -mt-0.5" />,
   },
   {
     link: "Contact",
     label: "Contact",
-    icon: <FaPhoneFlip />,
+    icon: <FaPhoneFlip className="-mt-0.5"/>,
   },
 ];
 
@@ -52,7 +52,7 @@ const NavSectionLink = ({
     onClick={onClick}
     smooth={true}
     duration={500}
-    className={`flex items-center gap-1 px-3 py-1 cursor-pointer ${className}`}
+    className={`flex items-center gap-1 font-medium px-3 py-1 cursor-pointer ${className}`}
   >
     {children}
   </Link>
@@ -125,7 +125,7 @@ export const Navbar = () => {
         <button
           title="Download My Resume"
           onClick={handleResumeDownload}
-          className="bg-green-500 hover:bg-green-700 text-white px-3 py-2 rounded-lg duration-500 font-semibold"
+          className="bg-[var(--primary-color-800)] hover:bg-[var(--primary-color-700)] text-white px-3 py-2 rounded-lg duration-500 font-semibold"
         >
           Get Resume
         </button>

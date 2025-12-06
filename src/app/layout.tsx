@@ -1,5 +1,6 @@
 import { Navbar } from "@/SharedComponent/Navbar";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "M Yeasin",
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Toaster/>
       </body>
     </html>
   );

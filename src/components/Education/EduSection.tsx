@@ -34,25 +34,24 @@ const educationData = [
   },
 ];
 
-export default function zEduSection() {
+export default function EduSection() {
   return (
     <section className="py-16 px-4 bg-green-100">
       <h1 className="flex items-center justify-center gap-3 pb-10 text-3xl font-semibold">
-        {" "}
         <LuAlignStartVertical className="text-green-800" />
         <span>Education</span>
       </h1>
       <div className="max-w-6xl mx-auto">
         <div className="relative">
           {/* Vertical Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-green-800 h-full"></div>
+          <div className="absolute lg:left-1/2 transform -translate-x-1/2 w-1 bg-green-800 h-full"></div>
 
           {/* Timeline Items */}
           <div className="space-y-16">
             {educationData?.map((item) => (
               <div key={item.id} className="relative">
                 {/* Timeline Dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-8">
+                <div className="absolute lg:left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-8">
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border-4 border-black">
                     <item.icon className="w-5 h-5 text-black" />
                   </div>
@@ -60,13 +59,13 @@ export default function zEduSection() {
 
                 {/* Content */}
                 <div
-                  className={`grid grid-cols-2 gap-8 items-start ${
-                    item.position === "right" ? "" : ""
+                  className={`grid lg:grid-cols-2 gap-8 items-start ${
+                    item?.position === "right" ? "" : ""
                   }`}
                 >
                   {/* Left Side */}
                   <div
-                    className={`${
+                    className={`order-2 lg:order-none ${
                       item.position === "left" ? "text-right" : "text-right"
                     }`}
                   >
@@ -92,8 +91,8 @@ export default function zEduSection() {
 
                   {/* Right Side */}
                   <div
-                    className={`${
-                      item.position === "right" ? "text-left" : "text-right"
+                    className={`order-2 lg:order-none${
+                      item.position === "right" ? "lg:text-left" : "lg:text-right"
                     }`}
                   >
                     {item.position === "right" ? (
@@ -116,25 +115,6 @@ export default function zEduSection() {
                     )}
                   </div>
                 </div>
-
-                {/* Description for the current item */}
-                {/* <div
-                  className={`mt-4 ${
-                    item.position === "left" ? "text-left" : "text-right"
-                  }`}
-                >
-                  <div
-                    className={`${
-                      item.position === "left"
-                        ? "pr-8 mr-auto max-w-md"
-                        : "pl-8 ml-auto max-w-md"
-                    }`}
-                  >
-                    <p className="text-gray-700 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                </div> */}
               </div>
             ))}
           </div>

@@ -7,7 +7,7 @@ const projects: ProjectType[] = [
     id: 1,
     title: "AssetPulse",
     description:
-      "This project is build for managing company assets. A company provides a number of assets to the employee and company HR_manager need to manage thats assets.",
+      "This project is build for managing company's assets. A company provides a number of assets to the employee and company HR_manager need to manage thats assets.",
     image: "/project/assetPulse.png", // Replace with your image URL
     features: [
       "Provide assets to the employee",
@@ -27,7 +27,7 @@ const projects: ProjectType[] = [
     challenges: [
       '3-types layout: for- "Normal users","Employees","HR-manager" ',
       "Image host in imgbb site",
-      'Data show in tabular formate by using "Tanstck table" ',
+      'Data show in tabular formate by using "Tanstack table" ',
       "Search and filter functionality implementation in server-side",
     ],
 
@@ -42,7 +42,7 @@ const projects: ProjectType[] = [
     id: 2,
     title: "BareBlog",
     description:
-      "This site is build for collecting Blogs about Technology. User can share their opition or can share their experience about different technology and it will pusblish as a blog. User can control his/her blog",
+      "This site is build for collecting Blogs about Technology. User can share their option or can share their experience about different technology and it will publish as a blog. User can control his/her blog",
     image: "/project/bareblog.png", // Replace with your image URL
     features: [
       "Homepage displays a banner, top blogs, and author details",
