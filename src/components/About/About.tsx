@@ -23,7 +23,7 @@ export const About = () => {
         </div>
 
         {/* About Content */}
-        <div className=" lg:w-[90%] my-auto mx-auto   space-y-5 text-black">
+        <div className="    space-y-5 text-black">
           <h1 className="text-3xl font-medium flex items-center gap-2">
             <BsStars className="text-green-600" />
             <span>About me </span>
