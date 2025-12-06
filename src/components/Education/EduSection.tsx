@@ -1,4 +1,4 @@
-import { GraduationCap, Palette, Monitor } from "lucide-react";
+import { GraduationCap, Monitor } from "lucide-react";
 import { LuAlignStartVertical } from "react-icons/lu";
 
 const educationData = [
