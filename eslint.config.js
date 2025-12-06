@@ -1,36 +1,70 @@
-import js from "@eslint/js";
-import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "typescript-eslint";
+import { FlatCompat } from "@eslint/eslintrc";
+import pluginTypescript from "@typescript-eslint/eslint-plugin";
+import parserTypescript from "@typescript-eslint/parser";
+import pluginUnusedImports from "eslint-plugin-unused-imports";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
-export default tseslint.config(
-  { ignores: ["dist"] },
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
+
+const eslintConfig = [
+  ...compat.extends(
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ),
   {
-    files: ["**/*.{js,jsx,ts,tsx}"],
-
-    extends: [
-      js.configs.recommended,
-      ...tseslint.configs.recommended,
-   ],
-
+    files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+      parser: parserTypescript,
     },
-
     plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+      "@typescript-eslint": pluginTypescript,
+      "unused-imports": pluginUnusedImports,
     },
-
     rules: {
-      ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "off",
-        { allowConstantExport: true },
+      "@next/next/no-img-element": "off",
+      "react/no-unescaped-entities": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
+      "no-console": ["error", { allow: ["info", "warn", "error"] }],
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "error",
+        {
+          vars: "all",
+          varsIgnorePattern: "^_",
+          args: "after-used",
+          argsIgnorePattern: "^_",
+        },
       ],
     },
-  }
-);
+  },
+  {
+    ignores: [
+      "node_modules",
+      ".pnp",
+      ".pnp.js",
+      ".next",
+      "out",
+      "build",
+      ".DS_Store",
+      "npm-debug.log*",
+      "yarn-debug.log*",
+      "yarn-error.log*",
+      ".vercel",
+      ".git",
+      ".gitignore",
+      "Dockerfile",
+      "docker-compose.yml",
+      ".dockerignore",
+    ],
+  },
+];
+
+export default eslintConfig;
