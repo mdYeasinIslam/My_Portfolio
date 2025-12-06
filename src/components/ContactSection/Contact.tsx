@@ -1,7 +1,7 @@
 'use client'
 import { FormEvent, useRef } from "react";
 import toast from "react-hot-toast";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const contactDetails = [
   {
