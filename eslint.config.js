@@ -3,20 +3,17 @@ import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
-import nextConfig from "eslint-config-next";
 
 export default tseslint.config(
   { ignores: ["dist"] },
 
   {
-    files: ["**/*.{ts,tsx,js,jsx}"],
+    files: ["**/*.{js,jsx,ts,tsx}"],
 
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
-      nextConfig, // <-- Next.js recommended config
-      nextConfig["core-web-vitals"], // <-- Optional but recommended
-    ],
+   ],
 
     languageOptions: {
       ecmaVersion: 2020,
