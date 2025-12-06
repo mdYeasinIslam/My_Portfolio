@@ -21,8 +21,11 @@ export default function HeroBanner() {
   }, [roles.length]);
 
   return (
-    <section id="banner" className="  min-h-screen overflow-hidden bg-gradient-to-r from-green-100 via-blue-50 to-pink-100">
-      <div className="container mx-auto relative  p-0">
+    <section
+      id="banner"
+      className="  min-h-screen overflow-hidden bg-gradient-to-r from-green-100 via-blue-50 to-pink-100"
+    >
+      <div className="container mx-auto relative p-0">
         {/* Social Media Icons - Left Side */}
         <div className="absolute  -left-80 md:left-6 lg:left-1 top-[25%] lg:top-1/2 transform -translate-y-1/2 flex flex-col gap-16 ">
           {/* <div className="text-gray-400 text-sm transform -rotate-90 origin-center mb-8">
@@ -120,11 +123,11 @@ export default function HeroBanner() {
 
               {/* Person Image */}
               <div className="relative  flex justify-center ">
-                  <img
-                    src="/myPic.png"
-                    alt="Frontend Developer"
-                    className="rounded-full md:w-full md:h-full border-2   shadow-lg lg:shadow-gray-300 bg-[#17460e]    lg:scale-90  duration-500"
-                  />
+                <img
+                  src="/myPic.png"
+                  alt="Frontend Developer"
+                  className="rounded-full md:w-full md:h-full border-2   shadow-lg lg:shadow-gray-300 bg-[#17460e]    lg:scale-90  duration-500"
+                />
               </div>
             </div>
 
@@ -183,10 +186,10 @@ export default function HeroBanner() {
                     link.download = "Yeasin-frontend_developer(resume).pdf"; // Filename when downloading
                     link.click();
                   }}
-                  className="bg-green-500 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-600 hover:scale-105 transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl"
+                  className="bg-[var(--primary-color-800)] text-white px-8 py-4 rounded-full font-semibold hover:bg-[var(--primary-color-800)] hover:scale-105 transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl"
                 >
-                  <span className="text-xl" > Get Resume</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />{" "}
+                  <span className="text-xl"> Get Resume</span>
+                  <ArrowRight className="w-6 h-6" />
                 </button>
               </div>
             </div>

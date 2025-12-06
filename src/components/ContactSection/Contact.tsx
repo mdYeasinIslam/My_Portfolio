@@ -23,9 +23,9 @@ const contactDetails = [
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null)
 
-  const handleEmail = (e:FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log('clicked')
+  const handleEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("clicked");
     if (form.current) {
       emailjs
         .sendForm(
@@ -35,19 +35,18 @@ const Contact = () => {
           "bWoaOSVfoucQDvqz0"
         )
         .then((result) => {
-          toast.success("Message sent successfully!");
-          console.log(result)
+          console.log(result);
           e.currentTarget.reset();
+          toast.success("Message sent successfully!");
         })
         .catch((error) => {
           toast.error("Failed to send message!");
-          console.log(error.text);
+          console.log(error);
         });
-     
     } else {
-      toast.error('Form reference is not available');
+      toast.error("Form reference is not available");
     }
-  }
+  };
   return (
     <section
       id="Contact"
@@ -59,7 +58,7 @@ const Contact = () => {
         </h2>
         <div className="lg:grid grid-cols-2  gap-4">
           <div className="flex flex-col  lg:flex-col gap-6">
-            {contactDetails.map((contact, index) => (
+            {contactDetails?.map((contact, index) => (
               <a
                 key={index}
                 className="flex items-center space-x-4  bg-white  transition duration-300 p-6 rounded-md shadow-lg"
@@ -76,7 +75,7 @@ const Contact = () => {
           </div>
 
           <div className="mt-10 text-center">
-            <h3 className="text-xl font-semibold mb-4">Send Us an Email</h3>
+            <h3 className="text-xl font-semibold mb-4">Send us an Email</h3>
             <form
               onSubmit={handleEmail}
               ref={form}
@@ -100,7 +99,7 @@ const Contact = () => {
               ></textarea>
               <button
                 type="submit"
-                className="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 transition"
+                className="bg-[var(--primary-color-800)] text-white font-semibold px-6 py-2 rounded-md hover:bg-[var(--primary-color-800)] transition"
               >
                 Send Email
               </button>

@@ -15,7 +15,6 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
   const handleClose = () => {
     setOpen(false);
   };
-
   return (
     <div className=" lg:flex gap-5 p-3 bg-white rounded-lg shadow-lg ">
       <div className="group w-full h-[200px]  lg:h-[300px] overflow-hidden hover:overflow-y-scroll">
@@ -27,18 +26,18 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
           className="w-full  duration-300"
         />
       </div>
-      <div className="w-full flex flex-col gap-3 justify-center ">
+      <div className="w-full flex flex-col gap-2 justify-center ">
         <h2 className="text-xl font-semibold">{project.title}</h2>
-        <p className="text-sm pt-2">{project?.description.slice(0, 90)}...</p>
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-col xl:flex-row gap-4 w-full">
+        <p className="text-sm pt-2 line-clamp-3">{project?.description}</p>
+        <div className="flex flex-col gap-2">
+          <div className="flex flex-col xl:flex-row gap-2 w-full">
             <Link target="_blank" href={project.liveSite} className="w-full">
-              <button className="w-full py-1 bg-green-600 font-medium rounded-lg text-white">
+              <button className="w-full py-1 bg-[var(--primary-color-800)] font-medium rounded-lg text-white">
                 Live Site
               </button>
             </Link>
             <Link target="_blank" href={project.github} className="w-full">
-              <button className="w-full py-1 bg-green-600 font-medium rounded-lg text-white">
+              <button className="w-full py-1 bg-[var(--primary-color-800)] font-medium rounded-lg text-white">
                 GitHub
               </button>
             </Link>
@@ -46,7 +45,7 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
           {/* <Link to={`/project/${project?.id}`} className="w-full"> */}
           <button
             onClick={handleClickOpen}
-            className="w-full py-1 bg-green-600 font-medium rounded-lg text-white"
+            className="w-full py-1 bg-[var(--primary-color-800)] font-medium rounded-lg text-white"
           >
             View Details
           </button>
