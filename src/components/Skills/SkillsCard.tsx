@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { ReactNode } from "react";
 
 interface PropType {
   skill: {
     name: string;
     level: number;
+    icon: ReactNode;
   };
 }
 
-export default function SkillsCard({ skill }:PropType) {
+export default function SkillsCard({ skill }: PropType) {
   return (
-    <div className="bg-white text-black p-4 rounded shadow-md flex flex-col">
-      <span className="text-lg font-bold mb-2">{skill.name}</span>
+    <div className="bg-white text-black p-4 rounded shadow-md flex items-center gap-2">
+      <div>{skill?.icon}</div>
+      <h1 className="text-lg font-bold">{skill.name}</h1>
       {/* <div className="w-full bg-gray-300 h-2 rounded overflow-hidden">
         <div
           className="bg-green-500 h-full"
