@@ -2,12 +2,20 @@
 import { FormEvent, useRef } from "react";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
+import { SiGithub } from "react-icons/si";
 
 const contactDetails = [
   {
     type: "Email",
-    value: "hyeasinislam@example.com",
+    value: "hyeasinislam@gmail.com",
+    link: "https://mail.google.com/mail/u/0/#inbox?compose=new",
     icon: "✉️",
+  },
+  {
+    type: "Github",
+    value: "https://github.com/mdYeasinIslam",
+    link: "https://github.com/mdYeasinIslam",
+    icon: <SiGithub className="text-black" />,
   },
   {
     type: "Phone / WhatsApp",
@@ -35,8 +43,8 @@ const Contact = () => {
           "bWoaOSVfoucQDvqz0"
         )
         .then((result) => {
-          console.log(result);
-          e.currentTarget.reset();
+          // console.log(result);
+          form.current?.reset()
           toast.success("Message sent successfully!");
         })
         .catch((error) => {
@@ -57,11 +65,12 @@ const Contact = () => {
           Contact Information -------------
         </h2>
         <div className="lg:grid grid-cols-2  gap-4">
-          <div className="flex flex-col  lg:flex-col gap-6">
+          <div className="grid grid-cols-2 gap-6">
             {contactDetails?.map((contact, index) => (
               <a
                 key={index}
-                className="flex items-center space-x-4  bg-white  transition duration-300 p-6 rounded-md shadow-lg"
+                href={contact.link}
+                className="flex items-center space-x-4  bg-white  transition duration-300 p-6 rounded-md shadow-lg cursor-pointer hover:scale-105 hover:bg-gradient-to-r from-green-50 to-pink-50"
                 target="_blank"
                 rel="noopener noreferrer"
               >
