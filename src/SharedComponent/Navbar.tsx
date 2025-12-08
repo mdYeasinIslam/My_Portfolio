@@ -93,7 +93,8 @@ export const Navbar = () => {
               onClick={() => setMenubar(true)}
               className="bg-green-200 rounded-md py-2 text-lg font-medium  hover:text-black"
             >
-              {icon} {label}
+              {/* {icon} */}
+              {label}
             </NavSectionLink>
           ))}
         </ul>
@@ -114,7 +115,8 @@ export const Navbar = () => {
               link={link}
               className="hover:text-green-900"
             >
-              {icon} {label}
+              {/* {icon} */}
+              {label}
             </NavSectionLink>
           ))}
         </ul>
