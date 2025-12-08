@@ -17,7 +17,7 @@ const Hobby = () => {
   return (
     <section
       id="hobby"
-      className="bg-gradient-to-r from-pink-100 via-blue-50 to-green-100  text-white py-20 px-6 "
+      className="bg-gradient-to-r from-pink-50 via-blue-50 to-green-50  text-white py-20 px-6 "
     >
       <div className="container mx-auto   space-y-10">
         <div className="flex items-center gap-5">

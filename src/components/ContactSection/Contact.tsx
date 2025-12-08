@@ -50,7 +50,7 @@ const Contact = () => {
   return (
     <section
       id="Contact"
-      className="  py-12 px-6 md:px-0 bg-green-100  text-black"
+      className="  py-12 px-6 md:px-0 bg-green-50  text-black"
     >
       <div className="container mx-auto">
         <h2 className="text-2xl font-bold text-left mb-8 uppercase">

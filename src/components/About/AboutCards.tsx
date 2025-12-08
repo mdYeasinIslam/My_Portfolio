@@ -7,29 +7,29 @@ import { SlLocationPin } from "react-icons/sl";
 const AboutCards = () => {
   const cards = [
     {
-      icon: FaRegCalendarAlt,
-      bgColor: '#DEFBEA',
-      title: '4 Months',
-      subtitle: 'Professional Experience'
+      icon: FaLaptopCode,
+      bgColor: "#DEFBEA",
+      title: "Frontend Focus",
+      subtitle: "Specialization",
     },
     {
-      icon: FaLaptopCode,
-      bgColor: '#DEFBEA',
-      title: 'Frontend Focus',
-      subtitle: 'Specialization'
+      icon: FaRegCalendarAlt,
+      bgColor: "#DEFBEA",
+      title: "Professional Experience",
+      subtitle: "4 Months",
     },
     {
       icon: GrLanguage,
-      bgColor: '#DEFBEA',
-      title: 'Languages',
-      subtitle: 'English, Bangla, Hindi, Urdu'
+      bgColor: "#DEFBEA",
+      title: "Languages",
+      subtitle: "English, Bangla, Hindi, Urdu",
     },
     {
       icon: SlLocationPin,
-      bgColor: '#DEFBEA',
-      title: 'Remote Ready',
-      subtitle: 'Work Preference'
-    }
+      bgColor: "#DEFBEA",
+      title: "Remote Ready",
+      subtitle: "Work Preference",
+    },
   ];
 
   return (
@@ -38,11 +38,19 @@ const AboutCards = () => {
         {cards.map((card, index) => {
           const Icon = card.icon;
           return (
-            <div key={index} className="p-2 lg:p-4 xl:p-6 rounded-xl md:rounded-2xl border border-gray-200 shadow-sm hover:shadow transition">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl mb-4" style={{ backgroundColor: card.bgColor }}>
+            <div
+              key={index}
+              className="p-2 lg:p-4 xl:p-6 rounded-xl md:rounded-2xl border border-gray-200 shadow-sm hover:shadow transition bg-gradient-to-r from-white to-[#faeef6]"
+            >
+              <div
+                className="w-12 h-12 flex items-center justify-center rounded-xl mb-4"
+                style={{ backgroundColor: card.bgColor }}
+              >
                 <Icon className="w-6 h-6 text-black" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">{card.title}</h3>
+              <h3 className="text-lg font-semibold text-gray-900">
+                {card.title}
+              </h3>
               <p className="text-sm text-gray-500">{card.subtitle}</p>
             </div>
           );

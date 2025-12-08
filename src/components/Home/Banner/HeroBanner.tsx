@@ -23,7 +23,7 @@ export default function HeroBanner() {
   return (
     <section
       id="banner"
-      className="  min-h-screen overflow-hidden bg-gradient-to-r from-green-100 via-blue-50 to-pink-100"
+      className="  min-h-screen overflow-hidden bg-gradient-to-r from-green-100 via-blue-50 to-pink-50"
     >
       <div className="container mx-auto relative">
         {/* Social Media Icons - Left Side */}

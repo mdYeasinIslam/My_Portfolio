@@ -89,7 +89,7 @@ const Skills = () => {
   return (
     <section
       id="Skill"
-      className="   py-6 md:py-10 bg-gradient-to-r from-pink-100 via-blue-50 to-green-100  text-black "
+      className="   py-6 md:py-10 bg-gradient-to-r from-pink-50 via-blue-50 to-green-50  text-black "
     >
       {/* Tabs */}
       <div className="container mx-auto ">
