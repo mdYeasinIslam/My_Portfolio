@@ -174,7 +174,7 @@ const Projects = () => {
   return (
     <div
       id="Project"
-      className=" min-h-screen flex justify-center items-center bg-gradient-to-r from-pink-100 via-blue-50 to-green-100  text-black py-10"
+      className=" min-h-screen flex justify-center items-center bg-gradient-to-r from-pink-50 via-blue-50 to-green-50  text-black py-10"
     >
       <div className="container mx-auto">
        

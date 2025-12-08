@@ -69,7 +69,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="w-full fixed mx-auto z-10 flex items-center justify-between py-4 px-2 bg-gradient-to-r text-black from-green-100 via-blue-50 to-pink-100">
+    <nav className="w-full fixed mx-auto z-10 flex items-center justify-between py-4 px-2 bg-gradient-to-r text-black from-green-100 via-blue-50 to-pink-50">
       {/* Mobile device */}
       <Box className="flex items-center gap-2">
         <div onClick={() => setMenubar(!menubar)} className="flex lg:hidden">
