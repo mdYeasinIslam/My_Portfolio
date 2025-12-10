@@ -3,6 +3,7 @@ import { FormEvent, useRef } from "react";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { SiGithub } from "react-icons/si";
+import Link from "next/link";
 
 const contactDetails = [
   {
@@ -67,19 +68,19 @@ const Contact = () => {
         <div className="lg:grid grid-cols-2  gap-4">
           <div className="grid grid-cols-2 gap-6">
             {contactDetails?.map((contact, index) => (
-              <a
+              <Link
                 key={index}
-                href={contact.link}
-                className="flex items-center space-x-4  bg-white  transition duration-300 p-6 rounded-md shadow-lg cursor-pointer hover:scale-105 hover:bg-gradient-to-r from-green-50 to-pink-50"
+                href={contact.link ? contact?.link:'/' }
+                className=" flex items-center gap-3 bg-white  transition duration-300 max-sm:px-2 max-sm:py-1 md:p-6 rounded-md shadow-lg cursor-pointer hover:scale-105 hover:bg-gradient-to-r from-green-50 to-pink-50 break-words"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="text-green-500 text-3xl">{contact.icon}</div>
+                <div className="text-green-500 lg:text-3xl">{contact.icon}</div>
                 <div>
                   <h3 className="text-lg font-semibold">{contact.type}</h3>
-                  <p className="text-sm text-gray-700">{contact.value}</p>
+                  <p className="text-sm text-gray-700 ">{contact.value}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
 
