@@ -62,7 +62,7 @@ export default function EduSection() {
 
                   {/* Content */}
                   <div
-                    className={`relative left-5 md:left-10 overflow-x-hidden  ${
+                    className={`relative pl-5 md:pl-12 overflow-x-hidden  ${
                       item?.position === "right" ? "" : ""
                     }`}
                   >
