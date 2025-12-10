@@ -5,6 +5,7 @@ import {
   Plus,
   Twitter,
 } from "lucide-react";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa6";
 
@@ -122,11 +123,13 @@ export default function HeroBanner() {
               </div>
 
               {/* Person Image */}
-              <div className="relative  flex justify-center ">
-                <img
-                  src="/myPic.png"
+              <div className="relative ">
+                <Image
+                  src="/myPic3.png"
                   alt="Frontend Developer"
-                  className="rounded-full md:w-full md:h-full border-2   shadow-lg lg:shadow-gray-300 bg-[#17460e]    lg:scale-90  duration-500"
+                  width={500}
+                  height={500}
+                  className=" w-full h-auto shadow-lg lg:shadow-gray-300 rounded-2xl scale-75  duration-500"
                 />
               </div>
             </div>
