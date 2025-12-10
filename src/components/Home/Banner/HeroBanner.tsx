@@ -168,14 +168,15 @@ export default function HeroBanner() {
               </div>
 
               {/* Description */}
-              <p className="text-gray-600 text-lg leading-relaxed max-w-lg animate-fade-in-up delay-300">
+              <p className="text-gray-800 text-lg  max-w-lg animate-fade-in-up delay-300">
                 We're a team of strategic working globally with largest brands,
                 We believe that progress only you to play things safe.
               </p>
-              <ul className="list-disc text-black grid grid-cols-3 xl:flex justify-center items-center md:justify-start xl:gap-10 font-medium relative xl:left-4 lg:text-xl">
-                <li>React.js</li>
+              <ul className="list-disc text-black grid grid-cols-3 xl:flex justify-center items-center md:justify-start xl:gap-10 font-medium relative xl:left-4 lg:text-xl max-md:pl-5">
                 <li>Typescript</li>
-                <li>Node JS</li>
+                <li>React.js</li>
+                <li>Next.js</li>
+                <li>Node Js</li>
                 <li>Express</li>
                 <li>MongoDB</li>
               </ul>
