@@ -11,3 +11,7 @@ html {
   --primary-color-900: #101828;
 }
 /* bg-[#0d145c] */
+.skills-list > li::marker {
+  margin-right: 0;
+  text-indent: 0;
+}

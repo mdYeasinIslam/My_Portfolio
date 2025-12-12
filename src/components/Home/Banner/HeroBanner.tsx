@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaFacebook, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 export default function HeroBanner() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -34,7 +34,7 @@ export default function HeroBanner() {
         </div> */}
           <a
             href="https://github.com/mdYeasinIslam"
-            className="text-gray-500 hover:text-gray-900 duration-500 transition-colors"
+            className="text-black duration-500 transition-colors"
           >
             <FaGithub className="w-6 h-6" />
           </a>
@@ -43,7 +43,7 @@ export default function HeroBanner() {
         </div> */}
           <a
             href="https://www.linkedin.com/in/mohammad-yeasin-islam/"
-            className="text-gray-400 hover:text-gray-600 transition-colors"
+            className="text-blue-600 transition-colors"
           >
             <FaLinkedin className="w-6 h-6" />
           </a>
@@ -52,16 +52,16 @@ export default function HeroBanner() {
         </div> */}
           <a
             href="https://x.com/hyeasinislam"
-            className="text-gray-400 hover:text-gray-600 transition-colors"
+            className="text-black transition-colors"
           >
-            <Twitter className="w-5 h-5" />
+            <FaXTwitter className="w-5 h-5" />
           </a>
           {/* <div className="text-gray-400 text-sm transform -rotate-90 origin-center">
           Facebook
         </div> */}
           <a
             href="https://www.facebook.com/profile.php?id=100011183114419"
-            className="text-gray-400 hover:text-gray-600 transition-colors"
+            className="text-blue-600 transition-colors"
           >
             <FaFacebook className="w-6 h-6" />
           </a>
@@ -172,8 +172,8 @@ export default function HeroBanner() {
                 We're a team of strategic working globally with largest brands,
                 We believe that progress only you to play things safe.
               </p>
-              <ul className="list-disc text-black grid grid-cols-3 xl:flex justify-center items-center md:justify-start xl:gap-10 font-medium relative xl:left-4 lg:text-xl max-md:pl-5">
-                <li>Typescript</li>
+              <ul className="skills-list list-disc list-inside text-black grid grid-cols-3 xl:flex flex-wrap justify-center items-center md:justify-start xl:gap-x-10 font-medium  lg:text-xl [&>li::marker]:[margin-right:0] [&>li::marker]:[text-indent:0]">
+                <li className="">Typescript</li>
                 <li>React.js</li>
                 <li>Next.js</li>
                 <li>Node Js</li>
