@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { SiGithub } from "react-icons/si";
 import Link from "next/link";
+import { Input } from "@mui/material";
 
 const contactDetails = [
   {
@@ -93,18 +94,18 @@ const Contact = () => {
               // method="POST"
               className="max-w-lg mx-auto space-y-3"
             >
-              <input
+              <Input
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                className="p-2 rounded-md"
+                className="w-full p-2 rounded-md border bg-white"
                 required
               />
               <textarea
-                className="w-full bg-white text-black p-4 rounded-md mb-4 resize-none focus:ring-2 focus:ring-green-500"
                 rows={5}
                 name="message"
                 placeholder="Write your message here..."
+                className="w-full bg-white text-black p-4 rounded-md mb-4 resize-none focus:ring-green-700 border"
                 required
               ></textarea>
               <button
