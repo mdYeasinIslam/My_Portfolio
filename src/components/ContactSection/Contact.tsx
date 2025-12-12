@@ -63,7 +63,7 @@ const Contact = () => {
       className="  py-12 px-6 md:px-0 bg-green-50  text-black"
     >
       <div className="container mx-auto">
-        <h2 className="text-2xl font-bold text-left mb-8 uppercase">
+        <h2 className="text-2xl font-bold text-left mb-8">
           Contact Information -------------
         </h2>
         <div className="lg:grid grid-cols-2  gap-4">

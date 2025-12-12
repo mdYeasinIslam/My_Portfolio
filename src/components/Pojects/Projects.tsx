@@ -178,9 +178,9 @@ const Projects = () => {
     >
       <div className="container mx-auto">
        
-        <h1 className="text-xl md:text-3xl font-medium flex items-center gap-2 uppercase py-3">
+        <h1 className="text-xl md:text-3xl font-medium flex items-center gap-2 py-3">
           <BsStars className="text-green-600" />
-          <span>Projects </span>
+          <span className="font-semibold">Projects </span>
           <span className="w-20 md:w-28 lg:w-40 border border-black"></span>
         </h1>
 
