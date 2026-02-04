@@ -125,7 +125,8 @@ export default function HeroBanner() {
               {/* Person Image */}
               <div className="relative ">
                 <Image
-                  src="/myPic3.png"
+                  // src="/myPic3.png"
+                  src="https://img.freepik.com/premium-photo/journalist-digital-avatar-generative-ai_934475-9380.jpg?semt=ais_hybrid&w=740&q=80"
                   alt="Frontend Developer"
                   width={500}
                   height={500}
