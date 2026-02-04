@@ -2,16 +2,15 @@
 
 import {
   ArrowRight,
-  Plus,
-  Twitter,
+  Plus
 } from "lucide-react";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaFacebook, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 export default function HeroBanner() {
   const [currentRole, setCurrentRole] = useState(0);
-  const roles = ["Frontend Developer", "React.js Developer", "Next.js Developer"];
+  const roles = ["Frontend Developer", "React Developer", "Next js Developer"];
 
   useEffect(() => {
     const interval = setInterval(() => {
