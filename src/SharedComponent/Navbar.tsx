@@ -76,7 +76,7 @@ export const Navbar = () => {
       {/* Mobile device */}
       <Box className="flex items-center gap-2">
         <div onClick={() => setMenubar(!menubar)} className="flex lg:hidden">
-          {menubar ? (
+          {menubar ? ( 
             <IoMenuSharp className="w-7 h-7" />
           ) : (
             <IoMdClose className="w-7 h-7" />
