@@ -1,12 +1,11 @@
 "use client";
 
-import {
-  ArrowRight,
-  Plus
-} from "lucide-react";
+import { Button } from "@mui/material";
+import { ArrowRight, Plus, SendIcon } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaFacebook, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-scroll";
 
 export default function HeroBanner() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -23,17 +22,18 @@ export default function HeroBanner() {
   return (
     <section
       id="banner"
-      className="  bg-gradient-to-r from-green-100 via-blue-50 to-pink-50"
+      // className="bg-gradient-to-r from-green-100 via-blue-50 to-pink-50"
+      className="bg-gradient-to-r from-[#05121C] via-[#041B29] to-[#05121D]"
     >
       <div className="container relative">
         {/* Social Media Icons - Left Side */}
-        <div className="absolute  -left-80 md:left-6 lg:left-1 top-[25%] lg:top-1/2 transform -translate-y-1/2 flex flex-col gap-16 ">
+        <div className="absolute  -left-80 md:left-6 lg:left-1 top-[25%] lg:top-1/2 transform -translate-y-1/2 flex flex-col gap-16 text-white">
           {/* <div className="text-gray-400 text-sm transform -rotate-90 origin-center mb-8">
           Instagram
         </div> */}
           <a
             href="https://github.com/mdYeasinIslam"
-            className="text-black duration-500 transition-colors"
+            className=" duration-500 transition-colors"
           >
             <FaGithub className="w-6 h-6" />
           </a>
@@ -49,10 +49,7 @@ export default function HeroBanner() {
           {/* <div className="text-gray-400 text-sm transform -rotate-90 origin-center">
           Twitter
         </div> */}
-          <a
-            href="https://x.com/hyeasinislam"
-            className="text-black transition-colors"
-          >
+          <a href="https://x.com/hyeasinislam" className=" transition-colors">
             <FaXTwitter className="w-5 h-5" />
           </a>
           {/* <div className="text-gray-400 text-sm transform -rotate-90 origin-center">
@@ -129,31 +126,31 @@ export default function HeroBanner() {
                   alt="Frontend Developer"
                   width={500}
                   height={500}
-                  className=" w-full h-auto shadow-lg lg:shadow-gray-300 rounded-2xl scale-75  duration-500"
+                  className=" w-full h-auto  shadow-lg lg:shadow-gray-300 rounded-2xl scale-75  duration-500"
                 />
               </div>
             </div>
 
             {/* Right Side - Content */}
-            <div className="space-y-8">
+            <div className="space-y-8 text-white">
               {/* Hey There Badge */}
               <div className="flex  items-center space-x-2 ">
                 <Plus
                   className="w-5 h-5 text-green-500 animate-spin"
                   style={{ animationDuration: "3s" }}
                 />
-                <span className="text-gray-700 font-medium">Hey There!</span>
+                <span className=" font-medium">Hey There!</span>
               </div>
 
               {/* Main Heading */}
               <div className="space-y-2">
-                <h1 className="text-5xl  xl:text-6xl font-bold text-gray-900 leading-tight animate-fade-in-up">
+                <h1 className="text-5xl  xl:text-6xl font-bold text-white leading-tight animate-fade-in-up">
                   I'm Mohammad Yeasin
                 </h1>
 
                 {/* Animated Role Text */}
                 <div className="relative h-16 overflow-hidden">
-                  <h2 className="text-4xl lg:text-5xl font-bold text-gray-600 absolute inset-0 flex items-center">
+                  <h2 className="text-4xl lg:text-5xl font-bold text-white/90 absolute inset-0 flex items-center">
                     <span
                       key={currentRole}
                       className="inline-block animate-slide-up"
@@ -168,11 +165,11 @@ export default function HeroBanner() {
               </div>
 
               {/* Description */}
-              <p className="text-gray-800 text-lg  max-w-lg animate-fade-in-up delay-300">
+              <p className="text-white/90 font-medium text-lg  max-w-lg animate-fade-in-up delay-300">
                 We're a team of strategic working globally with largest brands,
                 We believe that progress only you to play things safe.
               </p>
-              <ul className="skills-list list-disc list-inside text-black grid grid-cols-3 xl:flex flex-wrap justify-center items-center md:justify-start xl:gap-x-10 font-medium  lg:text-xl [&>li::marker]:[margin-right:0] [&>li::marker]:[text-indent:0]">
+              <ul className="skills-list list-disc list-inside  grid grid-cols-3 xl:flex flex-wrap justify-center items-center md:justify-start xl:gap-x-10 font-medium  lg:text-xl [&>li::marker]:[margin-right:0] [&>li::marker]:[text-indent:0]">
                 <li className="">Typescript</li>
                 <li>React.js</li>
                 <li>Next.js</li>
@@ -182,7 +179,7 @@ export default function HeroBanner() {
               </ul>
               {/* Buttons */}
               <div className="flex items-center space-x-6 animate-fade-in-up delay-500">
-                <button
+                {/* <button
                   title="Download My Resume"
                   onClick={() => {
                     const link = document.createElement("a");
@@ -190,11 +187,46 @@ export default function HeroBanner() {
                     link.download = "Yeasin-frontend_developer(resume).pdf"; // Filename when downloading
                     link.click();
                   }}
-                  className="bg-[var(--primary-color-800)] text-white px-8 py-4 rounded-full font-semibold hover:bg-[var(--primary-color-800)] hover:scale-105 transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl"
+                  className="bg-[var(--primary-color-800)] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[var(--primary-color-800)] hover:scale-105 transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl"
                 >
                   <span className="text-xl"> Get Resume</span>
                   <ArrowRight className="w-6 h-6" />
-                </button>
+                </button> */}
+                <Link to="Contact">
+                  <Button
+                    variant="contained"
+                    title="Download My Resume"
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: 600,
+                      backgroundColor: "transparent",
+                      color: "white",
+                      border: " 1px solid #475569",
+                    }}
+                    className="!normal-case !shadow-none hover:!bg-[var(--primary-color-800)]  transition-all duration-300"
+                  >
+                    Hire me
+                  </Button>
+                </Link>
+                <Button
+                  variant="contained"
+                  title="Download My Resume"
+                  endIcon={<ArrowRight width={20} className="" />}
+                  style={{
+                    fontSize: "18px",
+                    fontWeight: 600,
+                    backgroundColor: "var(--primary-color-800)",
+                  }}
+                  onClick={() => {
+                    const link = document.createElement("a");
+                    link.href = "/Yeasin-frontend_developer(resume).pdf"; // File location in the public folder
+                    link.download = "Yeasin-frontend_developer(resume).pdf"; // Filename when downloading
+                    link.click();
+                  }}
+                  className="!normal-case"
+                >
+                  Get Resume
+                </Button>
               </div>
             </div>
           </div>
