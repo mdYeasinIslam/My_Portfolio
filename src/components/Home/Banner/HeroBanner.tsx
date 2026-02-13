@@ -23,7 +23,8 @@ export default function HeroBanner() {
   return (
     <section
       id="banner"
-      className="  bg-gradient-to-r from-green-100 via-blue-50 to-pink-50"
+      // className="bg-gradient-to-r from-green-100 via-blue-50 to-pink-50"
+      className="bg-gradient-to-r from-[#05121C] via-[#041B29] to-[#05121D]"
     >
       <div className="container relative">
         {/* Social Media Icons - Left Side */}
