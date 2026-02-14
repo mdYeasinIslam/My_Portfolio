@@ -40,7 +40,8 @@ const AboutCards = () => {
           return (
             <div
               key={index}
-              className="p-2 lg:p-4 xl:p-6 rounded-xl md:rounded-2xl border border-gray-200 shadow-sm hover:shadow transition bg-gradient-to-r from-white to-[#faeef6]"
+              // className="p-2 lg:p-4 xl:p-6 rounded-xl md:rounded-2xl border border-gray-200 shadow-sm hover:shadow transition bg-gradient-to-r from-white to-[#faeef6]"
+              className="p-2 lg:p-4 xl:p-6 rounded-xl md:rounded-2xl border border-gray-200  transition bg-white/10"
             >
               <div
                 className="w-12 h-12 flex items-center justify-center rounded-xl mb-4"
@@ -48,10 +49,10 @@ const AboutCards = () => {
               >
                 <Icon className="w-6 h-6 text-black" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold ">
                 {card.title}
               </h3>
-              <p className="text-sm text-gray-500">{card.subtitle}</p>
+              <p className="text-sm ">{card.subtitle}</p>
             </div>
           );
         })}

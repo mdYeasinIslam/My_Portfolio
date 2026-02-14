@@ -17,15 +17,15 @@ const Hobby = () => {
   return (
     <section
       id="hobby"
-      className="bg-gradient-to-r from-pink-50 via-blue-50 to-green-50  text-white py-20 px-6 "
+      className=" text-white py-20 px-6 "
     >
       <div className="container mx-auto   space-y-10">
         <div className="flex items-center gap-5">
-          <div className="rotate-0 text-black text-2xl font-bold tracking-wider flex items-center gap-4">
+          <div className="rotate-0  text-2xl font-bold tracking-wider flex items-center gap-4">
             <PiShootingStarBold className="text-green-600"/>
             <span> LOVE TO DO</span>
           </div>
-          <div className="border border-black w-12 md:w-20 lg:w-40"></div>
+          <div className="border border-white w-12 md:w-20 lg:w-40"></div>
         </div>
         <Marquee className="!w-full ">
           {activities.map((activity, index) => (

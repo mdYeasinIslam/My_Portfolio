@@ -97,7 +97,7 @@ export default function HeroBanner() {
         </div>
 
         {/* Main Content */}
-        <div className="container mx-auto pt-24 lg:py-24 flex items-center min-h-screen">
+        <div className="pt-24 lg:pt-24 flex items-center min-h-screen">
           <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 lg:gap-0 xl:gap-12 md:items-center w-full">
             {/* Left Side - Image */}
             <div className="relative">
@@ -165,7 +165,7 @@ export default function HeroBanner() {
               </div>
 
               {/* Description */}
-              <p className="text-white/90 font-medium text-lg  max-w-lg animate-fade-in-up delay-300">
+              <p className="text-white/80 font-medium text-lg  max-w-lg animate-fade-in-up delay-300">
                 We're a team of strategic working globally with largest brands,
                 We believe that progress only you to play things safe.
               </p>
@@ -203,7 +203,7 @@ export default function HeroBanner() {
                       color: "white",
                       border: " 1px solid #475569",
                     }}
-                    className="!normal-case !shadow-none hover:!bg-[var(--primary-color-800)]  transition-all duration-300"
+                    className="!normal-case !rounded-lg !shadow-none hover:!bg-[var(--primary-color-  00)]  transition-all duration-300"
                   >
                     Hire me
                   </Button>
@@ -223,7 +223,7 @@ export default function HeroBanner() {
                     link.download = "Yeasin-frontend_developer(resume).pdf"; // Filename when downloading
                     link.click();
                   }}
-                  className="!normal-case"
+                  className="!normal-case !rounded-lg"
                 >
                   Get Resume
                 </Button>

@@ -71,7 +71,7 @@ export const Navbar = () => {
   return (
     <nav
       // className="w-full fixed mx-auto z-10 flex items-center justify-between py-4 px-2 bg-gradient-to-r text-black from-green-100 via-blue-50 to-pink-50"
-      className="w-full fixed mx-auto z-10 flex items-center justify-between py-4 px-2  text-white bg-slate-800/40 backdrop-blur-md  border-[0.5px] border-white/20 transition-colors duration-300 shadow-lg rounded-xl"
+      className="w-full fixed mx-auto z-10 flex items-center justify-between py-3 px-4  text-white bg-slate-800/40 backdrop-blur-md  border-[0.5px] border-white/20 transition-colors duration-300 shadow-lg "
     >
       {/* Mobile device */}
       <Box className="flex items-center gap-2">
@@ -116,7 +116,7 @@ export const Navbar = () => {
             <NavSectionLink
               key={link}
               link={link}
-              className="hover:text-green-900"
+              className="hover:underline"
             >
               {/* {icon} */}
               {label}
