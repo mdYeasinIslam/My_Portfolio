@@ -25,9 +25,9 @@ export default function HeroBanner() {
       // className="bg-gradient-to-r from-green-100 via-blue-50 to-pink-50"
       className="bg-gradient-to-r from-[#05121C] via-[#041B29] to-[#05121D]"
     >
-      <div className="container relative">
+      <div className="container relative pt-24 ">
         {/* Social Media Icons - Left Side */}
-        <div className="absolute  -left-80 md:left-6 lg:left-1 top-[25%] lg:top-1/2 transform -translate-y-1/2 flex flex-col gap-16 text-white">
+        <div className="absolute  left-6 lg:left-1 top-[25%] md:top-[35%] lg:top-1/2 transform -translate-y-1/2 flex flex-col gap-10 md:gap-16 text-white">
           {/* <div className="text-gray-400 text-sm transform -rotate-90 origin-center mb-8">
           Instagram
         </div> */}
@@ -97,8 +97,8 @@ export default function HeroBanner() {
         </div>
 
         {/* Main Content */}
-        <div className="pt-24 lg:pt-24 flex items-center min-h-screen">
-          <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 lg:gap-0 xl:gap-12 md:items-center w-full">
+        <div className="flex items-center min-h-screen">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-3 lg:gap-0 xl:gap-12 lg:items-center w-full">
             {/* Left Side - Image */}
             <div className="relative">
               {/* Green Organic Shape Background */}
@@ -122,11 +122,12 @@ export default function HeroBanner() {
               <div className="relative ">
                 <Image
                   // src="/myPic3.png"
-                  src="https://img.freepik.com/premium-photo/journalist-digital-avatar-generative-ai_934475-9380.jpg?semt=ais_hybrid&w=740&q=80"
+                  // src="https://img.freepik.com/premium-photo/journalist-digital-avatar-generative-ai_934475-9380.jpg?semt=ais_hybrid&w=740&q=80"
+                  src={"/banner-img2.png"}
                   alt="Frontend Developer"
                   width={500}
                   height={500}
-                  className=" w-full h-auto  shadow-lg lg:shadow-gray-300 rounded-2xl scale-75  duration-500"
+                  className=" w-full  shadow lg:shadow-black rounded-2xl scale-75   duration-500"
                 />
               </div>
             </div>
@@ -144,13 +145,13 @@ export default function HeroBanner() {
 
               {/* Main Heading */}
               <div className="space-y-2">
-                <h1 className="text-5xl  xl:text-6xl font-bold text-white leading-tight animate-fade-in-up">
+                <h1 className="text-3xl  xl:text-6xl font-bold text-white leading-tight animate-fade-in-up">
                   I'm Mohammad Yeasin
                 </h1>
 
                 {/* Animated Role Text */}
-                <div className="relative h-16 overflow-hidden">
-                  <h2 className="text-4xl lg:text-5xl font-bold text-white/90 absolute inset-0 flex items-center">
+                <div className="relative h-10 md:h-16 overflow-hidden">
+                  <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white/90 absolute inset-0 flex items-center">
                     <span
                       key={currentRole}
                       className="inline-block animate-slide-up"
@@ -215,7 +216,7 @@ export default function HeroBanner() {
                   style={{
                     fontSize: "18px",
                     fontWeight: 600,
-                    border:'0.5px solid transparent'
+                    border: "0.5px solid transparent",
                   }}
                   onClick={() => {
                     const link = document.createElement("a");

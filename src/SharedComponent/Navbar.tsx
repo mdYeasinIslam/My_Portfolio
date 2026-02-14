@@ -76,17 +76,15 @@ export const Navbar = () => {
       {/* Mobile device */}
       <Box className="flex items-center gap-2">
         <div onClick={() => setMenubar(!menubar)} className="flex lg:hidden">
-          {menubar ? ( 
+          {menubar ? (
             <IoMenuSharp className="w-7 h-7" />
           ) : (
             <IoMdClose className="w-7 h-7" />
           )}
         </div>
         <ul
-          className={`absolute w-2/3 md:w-1/2  lg:hidden duration-1000 px-4 py-5 flex flex-col gap-5 ${
-            menubar
-              ? "left-[-500px] top-14"
-              : "top-16 left-0 bg-gradient-to-r text-black from-green-100 via-blue-50 to-pink-100"
+          className={`absolute w-2/3 md:w-1/2  bg-[#05121C] text-white lg:hidden duration-1000 px-4 py-5 flex flex-col gap-5 ${
+            menubar ? "left-[-500px] top-16" : "top-16 left-0   "
           }`}
         >
           {navItems.map(({ link, label, icon }) => (
@@ -94,7 +92,7 @@ export const Navbar = () => {
               key={link}
               link={link}
               onClick={() => setMenubar(true)}
-              className="bg-green-200 rounded-md py-2 text-lg font-medium  hover:text-black"
+              className="bg-white/20 rounded-md py-2 text-lg font-medium  hover:text-black"
             >
               {/* {icon} */}
               {label}
@@ -113,11 +111,7 @@ export const Navbar = () => {
       <Box>
         <ul className="hidden lg:flex xl:gap-5">
           {navItems.map(({ link, label, icon }) => (
-            <NavSectionLink
-              key={link}
-              link={link}
-              className="hover:underline"
-            >
+            <NavSectionLink key={link} link={link} className="hover:underline">
               {/* {icon} */}
               {label}
             </NavSectionLink>

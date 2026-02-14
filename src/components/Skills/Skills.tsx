@@ -104,11 +104,11 @@ const Skills = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 border font-medium ${
+              className={`px-4 py-2 border  font-medium ${
                 activeCategory === category
                   ? "bg-[#0a2336] text-white "
-                  : "bg-transparent border-white  text-white/80"
-              } rounded transition duration-300 hover:bg-[#0a2336] hover:text-white`}
+                  : "bg-transparent border-white/20  text-white/80"
+              } rounded transition duration-300 border-white/40 hover:bg-[#0a2336] hover:text-white`}
             >
               {category}
             </button>

@@ -8,7 +8,7 @@ export const About = () => {
     <section
       id="About"
       // className="pt-20 pb-20 bg-gradient-to-r from-green-100 via-blue-50 to-pink-50"
-      className="pt-20 pb-20 "
+      className="pt-28 lg:pt-20 pb-20 "
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-3  lg:gap-5   text-white">
         {/* Image Section */}

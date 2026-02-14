@@ -12,7 +12,7 @@ export default function SkillsCard({ skill }: PropType) {
   return (
     <div
       // className="bg-white text-black p-4 rounded shadow-md flex items-center gap-2 hover:scale-105 duration-300 transition-transform bg-gradient-to-r from-green-50 to-[#FAEAF5]"
-      className="bg-white/20 p-4 rounded shadow-md flex items-center gap-2 hover:scale-105 duration-300 transition-transform "
+      className="bg-[#0F172A] p-4 rounded shadow-md flex items-center gap-2 hover:scale-105 duration-300 transition-transform border border-white/20"
     >
       <div>{skill?.icon}</div>
       <h1 className="text-lg font-bold">{skill.name}</h1>
