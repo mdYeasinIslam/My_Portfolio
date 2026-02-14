@@ -89,14 +89,15 @@ const Skills = () => {
   return (
     <section
       id="Skill"
-      className="   py-6 md:py-10 bg-gradient-to-r from-pink-50 via-blue-50 to-green-50  text-black "
+      // className="   py-6 md:py-10 bg-gradient-to-r from-pink-50 via-blue-50 to-green-50  text-black "
+      className="   py-6 md:py-10   text-white "
     >
       {/* Tabs */}
       <div className="container mx-auto ">
         <h1 className="text-xl md:text-3xl font-semibold flex items-center gap-2 py-3">
           <BsStars className="text-green-600" />
           <span>Skills </span>
-          <span className="w-20 md:w-28 lg:w-40 border border-black"></span>
+          <span className="w-20 md:w-28 lg:w-40 border border-white"></span>
         </h1>
         <div className="grid md:flex gap-5 my-6">
           {categories.map((category) => (
@@ -105,9 +106,9 @@ const Skills = () => {
               onClick={() => setActiveCategory(category)}
               className={`px-4 py-2 border font-medium ${
                 activeCategory === category
-                  ? "bg-[#0d145c] text-white "
-                  : "bg-transparent border-black hover:text-white text-black"
-              } rounded transition duration-300 hover:bg-[#0d145c]`}
+                  ? "bg-[#0a2336] text-white "
+                  : "bg-transparent border-white  text-white/80"
+              } rounded transition duration-300 hover:bg-[#0a2336] hover:text-white`}
             >
               {category}
             </button>
