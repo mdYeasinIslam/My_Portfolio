@@ -31,7 +31,7 @@ const Hobby = () => {
           {activities.map((activity, index) => (
             <div
               key={index}
-              className="w-72 bg-white text-black hover:bg-gray-200 transition duration-300 py-6 rounded-md flex flex-col items-center justify-center shadow-md ml-10 "
+              className="w-72 bg-white/10 text-white  transition duration-300 py-6 rounded-md flex flex-col items-center justify-center shadow-md ml-10 "
             >
               <div className="text-green-500 text-4xl mb-4">
                 {activity.icon}

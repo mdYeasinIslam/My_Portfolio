@@ -174,14 +174,15 @@ const Projects = () => {
   return (
     <div
       id="Project"
-      className=" min-h-screen flex justify-center items-center bg-gradient-to-r from-pink-50 via-blue-50 to-green-50  text-black py-10"
+      // className=" min-h-screen flex justify-center items-center bg-gradient-to-r from-pink-50 via-blue-50 to-green-50  text-black py-10"
+      className=" min-h-screen flex justify-center items-center   text-white py-10"
     >
       <div className="container mx-auto">
        
         <h1 className="text-xl md:text-3xl font-medium flex items-center gap-2 py-3">
-          <BsStars className="text-green-600" />
+          <BsStars className="text-green-500" />
           <span className="font-semibold">Projects </span>
-          <span className="w-20 md:w-28 lg:w-40 border border-black"></span>
+          <span className="w-20 md:w-28 lg:w-40 border"></span>
         </h1>
 
         <div className=" grid grid-cols-1 md:grid-cols-2 items-center lg:grid-cols-2 gap-6 ">

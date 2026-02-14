@@ -203,7 +203,7 @@ export default function HeroBanner() {
                       color: "white",
                       border: " 1px solid #475569",
                     }}
-                    className="!normal-case !rounded-lg !shadow-none hover:!bg-[var(--primary-color-  00)]  transition-all duration-300"
+                    className="!normal-case !rounded-lg !shadow-none hover:!bg-black/50  !transition-all !duration-300"
                   >
                     Hire me
                   </Button>
@@ -215,7 +215,7 @@ export default function HeroBanner() {
                   style={{
                     fontSize: "18px",
                     fontWeight: 600,
-                    backgroundColor: "var(--primary-color-800)",
+                    border:'0.5px solid transparent'
                   }}
                   onClick={() => {
                     const link = document.createElement("a");
@@ -223,7 +223,7 @@ export default function HeroBanner() {
                     link.download = "Yeasin-frontend_developer(resume).pdf"; // Filename when downloading
                     link.click();
                   }}
-                  className="!normal-case !rounded-lg"
+                  className="!normal-case !rounded-lg !bg-black/50  hover:!border-white/50 !transition-colors !duration-300"
                 >
                   Get Resume
                 </Button>
