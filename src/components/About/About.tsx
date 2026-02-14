@@ -28,7 +28,7 @@ export const About = () => {
           <h1 className="text-3xl font-medium flex items-center gap-2">
             <BsStars className="text-green-600" />
             <span>About me </span>
-            <span className="w-20 md:w-28 lg:w-40 border border-black"></span>
+            <span className="w-20 md:w-28 lg:w-40 border border-white"></span>
           </h1>
           <h1 className="text-white/80">
             I am Yeasin, a Front-end Developer specializing in React.js,

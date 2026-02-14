@@ -43,6 +43,7 @@ export default function EduSection() {
         <div className="flex items-center  gap-3 pb-10 text-3xl font-semibold p-0!">
           <IoSchoolSharp className="text-green-500" />
           <span>Education</span>
+          <span className="w-20 md:w-28 lg:w-40 border border-white"></span>
         </div>
         <div className="">
           <div className="relative">
@@ -68,9 +69,7 @@ export default function EduSection() {
                   >
                     <div>
                       <div className="pr-8">
-                        <h3 className="text-2xl font-bold ">
-                          {item.title}
-                        </h3>
+                        <h3 className="text-2xl font-bold ">{item.title}</h3>
                         <p className="text-white/80  text-base font-medium ">
                           {item.institution}
                         </p>
