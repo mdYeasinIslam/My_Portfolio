@@ -38,7 +38,7 @@ const educationData = [
 
 export default function EduSection() {
   return (
-    <section id="Education" className="py-16 bg-green-50">
+    <section id="Education" className="py-16">
       <div className="container mx-auto">
         <div className="flex items-center  gap-3 pb-10 text-3xl font-semibold p-0!">
           <IoSchoolSharp className="text-green-800" />

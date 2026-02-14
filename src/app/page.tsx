@@ -23,12 +23,12 @@ export default function Home() {
         <meta name="author" content="Mohammad Yeasin" />
         <link rel="canonical" href="https://yourdomain.com" />
       </Head>
-      <main className="text-xl">
+      <main className="text-xl bg-gradient-to-r from-[#05121C] via-[#041B29] to-[#05121D]">
         {/* <Banner /> */}
         <HeroBanner />
         <About />
         {/* <Education /> */}
-        <EduSection/>
+        <EduSection />
         <Hobby />
         <Skills />
         <Projects />

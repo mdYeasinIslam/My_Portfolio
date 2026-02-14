@@ -7,7 +7,8 @@ export const About = () => {
   return (
     <section
       id="About"
-      className="pt-0 pb-20 bg-gradient-to-r from-green-100 via-blue-50 to-pink-50"
+      // className="pt-20 pb-20 bg-gradient-to-r from-green-100 via-blue-50 to-pink-50"
+      className="pt-20 pb-20 "
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-3  lg:gap-5   text-white">
         {/* Image Section */}
@@ -23,13 +24,13 @@ export const About = () => {
         </div>
 
         {/* About Content */}
-        <div className="    space-y-5 text-black">
+        <div className="    space-y-5 ">
           <h1 className="text-3xl font-medium flex items-center gap-2">
             <BsStars className="text-green-600" />
             <span>About me </span>
             <span className="w-20 md:w-28 lg:w-40 border border-black"></span>
           </h1>
-          <h1 className=" text-gray-600">
+          <h1 className="text-white/80">
             I am Yeasin, a Front-end Developer specializing in React.js,
             Next.js, TypeScript, and Tailwind CSS, with a passion for building
             scalable, responsive web applications in collaborative environments.
