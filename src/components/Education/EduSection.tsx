@@ -39,9 +39,9 @@ const educationData = [
 export default function EduSection() {
   return (
     <section id="Education" className="py-16">
-      <div className="container mx-auto">
+      <div className="container mx-auto text-white">
         <div className="flex items-center  gap-3 pb-10 text-3xl font-semibold p-0!">
-          <IoSchoolSharp className="text-green-800" />
+          <IoSchoolSharp className="text-green-500" />
           <span>Education</span>
         </div>
         <div className="">
@@ -68,18 +68,18 @@ export default function EduSection() {
                   >
                     <div>
                       <div className="pr-8">
-                        <h3 className="text-2xl font-bold text-black">
+                        <h3 className="text-2xl font-bold ">
                           {item.title}
                         </h3>
-                        <p className="text-gray-700  text-base font-medium ">
+                        <p className="text-white/80  text-base font-medium ">
                           {item.institution}
                         </p>
-                        <p className="w-fit px-2 rounded-full text-sm font-medium bg-gray-300">
+                        <p className="w-fit px-2 py-0.5 rounded-full text-xs font-medium bg-slate-800">
                           {item.period}
                         </p>
                       </div>
                       <div className="pr-8 mt-4">
-                        <p className="text-slate-700 text-lg text-start">
+                        <p className="text-white/90 text-lg text-start">
                           {item.description}
                         </p>
                       </div>
