@@ -16,7 +16,7 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
     setOpen(false);
   };
   return (
-    <div className=" lg:flex gap-5 p-3 bg-white rounded-lg shadow-lg ">
+    <div className=" lg:flex gap-5 p-3 bg-white/10 rounded-lg shadow-lg ">
       <div className="group w-full h-[200px]  lg:h-[300px] overflow-hidden hover:overflow-y-scroll">
         <Image
           src={project.image}
@@ -32,12 +32,12 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
         <div className="flex flex-col gap-2">
           <div className="flex flex-col xl:flex-row gap-2 w-full">
             <Link target="_blank" href={project.liveSite} className="w-full">
-              <button className="w-full py-1 bg-[var(--primary-color-800)] font-medium rounded-lg text-white">
+              <button className="w-full py-1 bg-[var(--primary-color-900)] font-medium rounded-lg text-white text-base cursor-pointer border border-transparent hover:border-white">
                 Live Site
               </button>
             </Link>
             <Link target="_blank" href={project.github} className="w-full">
-              <button className="w-full py-1 bg-[var(--primary-color-800)] font-medium rounded-lg text-white">
+              <button className="w-full py-1 bg-[var(--primary-color-900)] font-medium rounded-lg text-white text-base cursor-pointer border border-transparent hover:border-white">
                 GitHub
               </button>
             </Link>
@@ -45,7 +45,7 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
           {/* <Link to={`/project/${project?.id}`} className="w-full"> */}
           <button
             onClick={handleClickOpen}
-            className="w-full py-1 bg-[var(--primary-color-800)] font-medium rounded-lg text-white"
+            className="w-full py-1 bg-[var(--primary-color-900)] font-medium rounded-lg text-white text-base cursor-pointer border border-transparent hover:border-white"
           >
             View Details
           </button>

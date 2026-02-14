@@ -57,14 +57,14 @@ export const About = () => {
           </h1> */}
 
           {/* Button Group */}
-          <div className="flex gap-5 md:space-x-5 ">
+          <div className="flex gap-5 md:gap-4 text-lg ">
             <Link to="Contact" smooth={true} duration={500}>
-              <button className="bg-[var(--primary-color-800)] hover:bg-green-800 font-semibold  px-4 py-1 rounded-lg text-white">
+              <button className="text-white bg-transparent hover:bg-black/90 border border-white/40 font-semibold  px-5 py-1.5 rounded-lg ">
                 Contact Me
               </button>
             </Link>
             <Link to="Skill" smooth={true} duration={500}>
-              <button className="bg-[var(--primary-color-800)] hover:bg-green-800 font-semibold px-4 py-1 rounded-lg text-white">
+              <button className="bg-black/50 border border-transparent  hover:border-white/50 transition-colors duration-300 font-semibold px-5 py-1.5 rounded-lg text-white">
                 My Skills
               </button>
             </Link>
