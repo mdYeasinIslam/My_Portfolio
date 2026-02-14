@@ -8,6 +8,7 @@ import { Input } from "@mui/material";
 import { title } from "framer-motion/client";
 import { FiLinkedin, FiPhone } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
+import { BsStars } from "react-icons/bs";
 interface ContactInfo {
   title: string;
   des?: string;
@@ -94,21 +95,20 @@ const Contact = () => {
       link.click();
     };
   return (
-    <section
-      id="Contact"
-      className="  py-12  md:px-0 bg-green-50  text-black"
-    >
+    <section id="Contact" className="  py-12  md:px-0  text-white">
       <div className="container mx-auto">
-        <h2 className="text-2xl font-bold text-left mb-8">
-          Contact Information -------------
-        </h2>
+        <h1 className="text-xl md:text-3xl font-medium flex items-center gap-2 py-3">
+          <BsStars className="text-green-500" />
+          <span className="font-semibold"> Contact Information </span>
+          <span className="w-20 md:w-28 lg:w-40 border"></span>
+        </h1>
         <div className="lg:grid grid-cols-1  gap-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {contactDetails?.map((contact, index) => {
               return (
                 <div
                   key={index}
-                  className="border border-green-600 rounded-xl bg-white  transition duration-300 p-4"
+                  className="border border-green-600 rounded-xl bg-white/10  transition duration-300 p-4"
                 >
                   <h1 className="font-semibold text-xl mb-3">
                     {contact.title}
@@ -124,11 +124,9 @@ const Contact = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <div className="text-green-800 lg:text-xl">
-                              {icon.icon}
-                            </div>
+                            <div className=" lg:text-xl">{icon.icon}</div>
 
-                            <p className="text-base text-gray-700  hover:underline">
+                            <p className="text-base   hover:underline">
                               {icon.value}
                             </p>
                           </Link>
@@ -140,7 +138,10 @@ const Contact = () => {
                     <p className="text-base font-medium">{contact?.des}</p>
                   )}
                   {contact.title.includes("Download") && (
-                    <button onClick={handleResumeDownload} className="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-primary transition-all duration-150 ease-in-out rounded-xl hover:pl-10 hover:pr-6 bg-gray-50 dark:bg-green-800 group mt-4">
+                    <button
+                      onClick={handleResumeDownload}
+                      className="relative inline-flex items-center justify-start py-3  px-6 overflow-hidden font-semibold text-primary transition-all duration-150 ease-in-out rounded-xl hover:pl-10  bg-gray-50 dark:bg-black/50 group mt-4"
+                    >
                       <span className="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-primary group-hover:h-full"></span>
                       {/* <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
                           <svg
@@ -199,19 +200,19 @@ const Contact = () => {
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                className="w-full p-2 rounded-md border bg-white"
+                className="w-full p-2 rounded-md border !text-white bg-black/50 "
                 required
               />
               <textarea
                 rows={5}
                 name="message"
                 placeholder="Write your message here..."
-                className="w-full bg-white text-black p-4 rounded-md mb-4 resize-none focus:ring-green-700 border"
+                className="w-full text-base bg-black/50 text-white p-2 rounded-md mb-4 resize-none focus:ring-slate-700 border"
                 required
               ></textarea>
               <button
                 type="submit"
-                className="bg-[var(--primary-color-800)] text-white font-semibold px-6 py-2 rounded-md hover:bg-[var(--primary-color-800)] transition"
+                className="hover:bg-black/50 text-lg text-white font-semibold px-6 py-2 rounded-md border border-white/30  transition"
               >
                 Send Email
               </button>
