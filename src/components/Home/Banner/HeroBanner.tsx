@@ -5,7 +5,7 @@ import { ArrowRight, Plus } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaFacebook, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { Element, Link } from "react-scroll";
+import { Link } from "react-scroll";
 
 export default function HeroBanner() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -20,15 +20,14 @@ export default function HeroBanner() {
   }, [roles.length]);
 
   return (
-    <Element name="banner">
       <section
         id="banner"
         // className="bg-gradient-to-r from-green-100 via-blue-50 to-pink-50"
         className="bg-gradient-to-r from-[#05121C] via-[#041B29] to-[#05121D]"
       >
-        <div className="container relative pt-24 lg:pt-0 ">
+        <div className="container relative pt-5 md:pt-20 lg:pt-0 ">
           {/* Social Media Icons - Left Side */}
-          <div className="absolute  left-6 lg:left-5 top-[22%] md:top-[35%] lg:top-1/2 transform -translate-y-1/2 flex flex-col gap-8 md:gap-16 text-white">
+          <div className="absolute  left-6 lg:left-5 top-[25%] md:top-[35%] lg:top-1/2 transform -translate-y-1/2 flex flex-col gap-5 md:gap-16 text-white">
             {/* <div className="text-gray-400 text-sm transform -rotate-90 origin-center mb-8">
           Instagram
         </div> */}
@@ -70,7 +69,7 @@ export default function HeroBanner() {
             <div className="w-4 h-4 bg-green-400 rounded-full mt-2 ml-4 opacity-80"></div>
           </div>
 
-          <div className=" absolute top-80 md:top-32 max-sm:right-0 md:left-[45%] 2xl:left-1/2 animate-bounce">
+          <div className=" absolute top-72 md:top-1/2 lg:top-32 max-lg:right-0 lg:left-[45%] 2xl:left-1/2 animate-bounce">
             <div className="w-16 h-1 bg-green-300 opacity-60 transform rotate-45"></div>
             <div className="w-12 h-1 bg-green-300 opacity-60 transform rotate-45 mt-1"></div>
             <div className="w-8 h-1 bg-green-300 opacity-60 transform rotate-45 mt-1"></div>
@@ -100,7 +99,7 @@ export default function HeroBanner() {
           </div>
 
           {/* Main Content */}
-          <div className="flex items-center min-h-screen">
+          <div className="flex items-center min-h-screen xl:min-h-[800px]">
             <div className="flex flex-col lg:grid lg:grid-cols-2 gap-3 lg:gap-0 xl:gap-12 lg:items-center w-full">
               {/* Left Side - Image */}
               <div className="relative">
@@ -136,7 +135,7 @@ export default function HeroBanner() {
               </div>
 
               {/* Right Side - Content */}
-              <div className="space-y-8 text-white">
+              <div className="space-y-4 md:space-y-8 text-white">
                 {/* Hey There Badge */}
                 <div className="flex  items-center space-x-2 ">
                   <Plus
@@ -169,12 +168,12 @@ export default function HeroBanner() {
                 </div>
 
                 {/* Description */}
-                <p className="text-white/80 font-medium text-lg  max-w-lg animate-fade-in-up delay-300 !mt-0">
+                <p className="text-white/80  font-medium text-sm md:text-lg  max-w-lg animate-fade-in-up delay-300 !mt-0">
                   We're a team of strategic working globally with largest
                   brands, We believe that progress only you to play things safe.
                 </p>
-                <ul className="skills-list list-disc list-inside  grid grid-cols-3 xl:flex flex-wrap justify-center items-center md:justify-start xl:gap-x-10 font-medium  lg:text-xl [&>li::marker]:[margin-right:0] [&>li::marker]:[text-indent:0]">
-                  <li className="">Typescript</li>
+                <ul className="w-fit skills-list list-disc list-inside  flex flex-wrap gap-x-4 xl:gap-x-10 font-medium text-sm md:text-lg  lg:text-xl  [&>li::marker]:[margin-right:0] [&>li::marker]:[text-indent:0]">
+                  <li>Typescript</li>
                   <li>React.js</li>
                   <li>Next.js</li>
                   <li>Node Js</li>
@@ -201,13 +200,12 @@ export default function HeroBanner() {
                       variant="contained"
                       title="Download My Resume"
                       style={{
-                        fontSize: "18px",
                         fontWeight: 600,
                         backgroundColor: "transparent",
                         color: "white",
                         border: " 1px solid #475569",
                       }}
-                      className="!normal-case !rounded-lg !shadow-none hover:!bg-black/50  !transition-all !duration-300"
+                      className="md:!text-lg !normal-case !rounded-lg !shadow-none hover:!bg-black/50  !transition-all !duration-300"
                     >
                       Hire me
                     </Button>
@@ -217,7 +215,6 @@ export default function HeroBanner() {
                     title="Download My Resume"
                     endIcon={<ArrowRight width={20} className="" />}
                     style={{
-                      fontSize: "18px",
                       fontWeight: 600,
                       border: "0.5px solid transparent",
                     }}
@@ -227,7 +224,7 @@ export default function HeroBanner() {
                       link.download = "Yeasin-frontend_developer(resume).pdf"; // Filename when downloading
                       link.click();
                     }}
-                    className="!normal-case !rounded-lg !bg-black/50  hover:!border-white/50 !transition-colors !duration-300"
+                    className="md:!text-lg !normal-case !rounded-lg !bg-black/50  hover:!border-white/50 !transition-colors !duration-300"
                   >
                     Get Resume
                   </Button>
@@ -304,6 +301,5 @@ export default function HeroBanner() {
           `}</style>
         </div>
       </section>
-    </Element>
   );
 }

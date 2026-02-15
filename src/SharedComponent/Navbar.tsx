@@ -54,7 +54,7 @@ const NavSectionLink = ({
       to={link}
       activeClass="active"
       spy={true}
-      offset={-70}
+      offset={-200}
       onClick={onClick}
       smooth={true}
       duration={500}
@@ -107,9 +107,14 @@ export const Navbar = () => {
           ))}
         </ul>
         <div className="flex items-center gap-2">
+          
           <Link to="banner" className="flex items-center gap-3">
-            <img src="/logo2.png" className="w-10 bg-black rounded-xl" alt="" />
-            <h2 className="font-medium text-xl">M Yeasin</h2>
+            <img
+              src="/logo2.png"
+              className="w-8 md:w-10 bg-black rounded-xl"
+              alt=""
+            />
+            <h2 className="font-medium text-base md:text-xl">M Yeasin</h2>
           </Link>
         </div>
       </Box>
@@ -122,7 +127,6 @@ export const Navbar = () => {
               {/* {icon} */}
               {label}
             </NavSectionLink>
-         
           ))}
         </ul>
       </Box>
@@ -132,7 +136,7 @@ export const Navbar = () => {
         <button
           title="Download My Resume"
           onClick={handleResumeDownload}
-          className="text-white text-sm md:text-base font-semibold bg-transparent hover:bg-black/90 border border-white/40 py-0.5  px-3 md:py-2 rounded-lg duration-300 "
+          className="text-white text-sm md:text-base font-semibold bg-transparent hover:bg-black/90 border border-white/40 py-1  px-3 md:py-2 rounded-lg duration-300 "
         >
           Get Resume
         </button>

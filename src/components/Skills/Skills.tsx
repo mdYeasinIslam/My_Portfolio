@@ -90,7 +90,7 @@ const Skills = () => {
     <section
       id="Skill"
       // className="   py-6 md:py-10 bg-gradient-to-r from-pink-50 via-blue-50 to-green-50  text-black "
-      className="   py-6 md:py-10   text-white "
+      className="   pt-10 md:pt-20   text-white "
     >
       {/* Tabs */}
       <div className="container mx-auto ">
