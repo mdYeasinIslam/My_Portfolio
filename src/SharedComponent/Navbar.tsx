@@ -7,8 +7,9 @@ import { GrProjects } from "react-icons/gr";
 import { IoMdClose } from "react-icons/io";
 import { IoHome, IoMenuSharp, IoSchoolSharp } from "react-icons/io5";
 import { RiLightbulbFlashLine } from "react-icons/ri";
-import { Link } from "react-scroll";
 import { RxHobbyKnife } from "react-icons/rx";
+import { Link } from "react-scroll";
+
 
 const navItems = [
   { link: "banner", label: "Home", icon: <IoHome className="-mt-0.5"/> },
@@ -46,17 +47,23 @@ const NavSectionLink = ({
   children: React.ReactNode;
   onClick?: () => void;
   className?: string;
-}) => (
-  <Link
-    to={link}
-    onClick={onClick}
-    smooth={true}
-    duration={500}
-    className={`flex items-center gap-1 font-medium px-3 py-1 cursor-pointer ${className}`}
-  >
-    {children}
-  </Link>
-);
+  }) => {
+   
+  return (
+    <Link
+      to={link}
+      activeClass="active"
+      spy={true}
+      offset={-70}
+      onClick={onClick}
+      smooth={true}
+      duration={500}
+      className={`font-medium px-3 py-1 cursor-pointer ${className}`}
+    >
+      {children}
+    </Link>
+  );
+  };
 
 export const Navbar = () => {
   const [menubar, setMenubar] = useState(true);
@@ -77,22 +84,22 @@ export const Navbar = () => {
       <Box className="flex items-center gap-2">
         <div onClick={() => setMenubar(!menubar)} className="flex lg:hidden">
           {menubar ? (
-            <IoMenuSharp className="w-7 h-7" />
+            <IoMenuSharp className="w-6 h-6" />
           ) : (
-            <IoMdClose className="w-7 h-7" />
+            <IoMdClose className="w-6 h-6" />
           )}
         </div>
         <ul
-          className={`absolute w-2/3 md:w-1/2  bg-[#05121C] text-white lg:hidden duration-1000 px-4 py-5 flex flex-col gap-5 ${
+          className={`absolute w-2/3 md:w-1/2  bg-[#05121C] text-white lg:hidden duration-1000 px-4 py-5 flex flex-col gap-1 ${
             menubar ? "left-[-500px] top-16" : "top-16 left-0   "
           }`}
         >
-          {navItems.map(({ link, label, icon }) => (
+          {navItems.map(({ link, label }) => (
             <NavSectionLink
               key={link}
               link={link}
               onClick={() => setMenubar(true)}
-              className="bg-white/20 rounded-md py-2 text-lg font-medium  hover:text-black"
+              className="bg-white/20 rounded-md text-base font-medium"
             >
               {/* {icon} */}
               {label}
@@ -115,6 +122,7 @@ export const Navbar = () => {
               {/* {icon} */}
               {label}
             </NavSectionLink>
+         
           ))}
         </ul>
       </Box>

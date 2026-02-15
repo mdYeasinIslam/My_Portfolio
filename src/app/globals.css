@@ -15,3 +15,7 @@ html {
   margin-right: 0;
   text-indent: 0;
 }
+.active {
+  text-decoration: underline;
+  font-weight: 700;
+}
