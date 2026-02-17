@@ -41,7 +41,7 @@ export default function EduSection() {
     <section id="Education" className="pt-20">
       <div className="container mx-auto text-white">
         <div className="flex items-center  gap-3 pb-10 text-2xl md:text-3xl font-semibold p-0!">
-          <IoSchoolSharp className="text-green-500" />
+          <LuAlignStartVertical className="text-green-500" />
           <span>Education</span>
           <span className="w-20 md:w-28 lg:w-40 border border-white"></span>
         </div>
