@@ -26,18 +26,20 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
           className="w-full  duration-300"
         />
       </div>
-      <div className="w-full flex flex-col gap-2 justify-center ">
-        <h2 className="text-xl font-semibold">{project.title}</h2>
-        <p className="text-sm pt-2 line-clamp-3">{project?.description}</p>
+      <div className="w-full flex flex-col gap-2 justify-between ">
+        <div>
+          <h2 className="text-xl font-semibold">{project.title}</h2>
+          <p className="text-sm pt-2 line-clamp-3">{project?.description}</p>
+        </div>
         <div className="flex flex-col gap-2">
           <div className="flex flex-col xl:flex-row gap-2 w-full">
             <Link target="_blank" href={project.liveSite} className="w-full">
-              <button className="w-full py-1 bg-[var(--primary-color-900)] font-medium rounded-lg text-white text-base cursor-pointer border border-transparent hover:border-white">
+              <button className="w-full py-1 bg-[var(--primary-color-900)] font-medium rounded-md text-white text-base cursor-pointer border border-transparent hover:border-white/50">
                 Live Site
               </button>
             </Link>
             <Link target="_blank" href={project.github} className="w-full">
-              <button className="w-full py-1 bg-[var(--primary-color-900)] font-medium rounded-lg text-white text-base cursor-pointer border border-transparent hover:border-white">
+              <button className="w-full py-1 bg-[var(--primary-color-900)] font-medium rounded-md text-white text-base cursor-pointer border border-transparent hover:border-white/50">
                 GitHub
               </button>
             </Link>
@@ -45,7 +47,7 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
           {/* <Link to={`/project/${project?.id}`} className="w-full"> */}
           <button
             onClick={handleClickOpen}
-            className="w-full py-1 bg-[var(--primary-color-900)] font-medium rounded-lg text-white text-base cursor-pointer border border-transparent hover:border-white"
+            className="w-full py-1 bg-[var(--primary-color-900)] font-medium rounded-md text-white text-base cursor-pointer border border-transparent hover:border-white/50"
           >
             View Details
           </button>

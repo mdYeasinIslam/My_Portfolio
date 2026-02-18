@@ -1,6 +1,6 @@
 "use client";
-import { Link } from "react-scroll";
 import { BsStars } from "react-icons/bs";
+import { Link } from "react-scroll";
 import AboutCards from "./AboutCards";
 
 export const About = () => {
@@ -8,7 +8,7 @@ export const About = () => {
     <section
       id="About"
       // className="pt-20 pb-20 bg-gradient-to-r from-green-100 via-blue-50 to-pink-50"
-      className="pt-20 pb-20 "
+      className="md:pt-28 lg:pt-0 "
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-3  lg:gap-5   text-white">
         {/* Image Section */}
@@ -24,13 +24,13 @@ export const About = () => {
         </div>
 
         {/* About Content */}
-        <div className="    space-y-5 ">
-          <h1 className="text-3xl font-medium flex items-center gap-2">
+        <div className="space-y-5">
+          <h1 className="text-2xl md:text-3xl font-medium flex items-center gap-2">
             <BsStars className="text-green-600" />
             <span>About me </span>
             <span className="w-20 md:w-28 lg:w-40 border border-white"></span>
           </h1>
-          <h1 className="text-white/80">
+          <p className="text-base md:text-lg text-white/80">
             I am Yeasin, a Front-end Developer specializing in React.js,
             Next.js, TypeScript, and Tailwind CSS, with a passion for building
             scalable, responsive web applications in collaborative environments.
@@ -40,7 +40,7 @@ export const About = () => {
             performance, clean code, and pixel-perfect UI. I'm committed to
             delivering high-quality solutions while continuously expanding my
             skill set toward full-stack development.
-          </h1>
+          </p>
           {/* <h1 className=" text-gray-600">
             Hello! This is{" "}
             <span className="font-medium underline"> Yeasin</span>, a passionate
@@ -57,14 +57,14 @@ export const About = () => {
           </h1> */}
 
           {/* Button Group */}
-          <div className="flex gap-5 md:gap-4 text-lg ">
+          <div className="flex gap-5 md:gap-4 ">
             <Link to="Contact" smooth={true} duration={500}>
-              <button className="text-white bg-transparent hover:bg-black/90 border border-white/40 font-semibold  px-5 py-1.5 rounded-lg ">
+              <button className="text-sm md:text-lg  text-white bg-transparent hover:bg-black/90 border border-white/40 font-semibold  px-5 py-1.5 rounded-lg ">
                 Contact Me
               </button>
             </Link>
             <Link to="Skill" smooth={true} duration={500}>
-              <button className="bg-black/50 border border-transparent  hover:border-white/50 transition-colors duration-300 font-semibold px-5 py-1.5 rounded-lg text-white">
+              <button className="text-sm md:text-lg  bg-black/50 border border-transparent  hover:border-white/50 transition-colors duration-300 font-semibold px-5 py-1.5 rounded-lg text-white">
                 My Skills
               </button>
             </Link>

@@ -177,7 +177,7 @@ const Contact = () => {
                         </svg>
                       </span>
 
-                      <span className="relative w-full text-left transition-colors duration-200 ease-in-out text-white group-hover:text-white">
+                      <span className="relative w-full text-base text-left transition-colors duration-200 ease-in-out text-white group-hover:text-white">
                         Download Resume
                       </span>
                     </button>

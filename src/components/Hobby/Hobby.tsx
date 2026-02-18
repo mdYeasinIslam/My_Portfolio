@@ -17,7 +17,7 @@ const Hobby = () => {
   return (
     <section
       id="hobby"
-      className=" text-white py-20 px-6 "
+      className=" text-white pt-20"
     >
       <div className="container mx-auto   space-y-10">
         <div className="flex items-center gap-5">
