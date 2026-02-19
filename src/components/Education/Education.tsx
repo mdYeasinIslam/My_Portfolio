@@ -49,13 +49,16 @@ export const Education = () => {
             <div key={index} className="mb-8 relative ">
               <div
                 id="icon"
-                className={`absolute border-2 border-white top-5 -left-[2.5px] transform -translate-x-1/2 -translate-y-1/2 bg-[#3B9DF8] dark:border-slate-600 rounded-full p-2 `}
+                className={`absolute border-2 border-white top-5 -left-[2.5px] transform -translate-x-1/2 -translate-y-1/2 bg-green-500 dark:border-slate-600 rounded-full p-2 `}
               >
                 {/* {milestone.icon} */}
               </div>
               <div className="pl-6 ">
                 <div className="flex flex-col">
-                  <h1 className="text-[#3B9DF8] font-semibold text-xl">
+                  <h1
+                    // className="text-[#3B9DF8] font-semibold text-xl"
+                    className="text-white/90 font-semibold text-xl"
+                  >
                     {milestone.title}
                   </h1>
                   <p className="dark:text-[#abc2d3] text-[#424242] text-base font-semibold">

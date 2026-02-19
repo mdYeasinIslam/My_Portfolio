@@ -92,7 +92,7 @@ export default function HeroBanner() {
           </svg>
         </div> */}
 
-          <div className="hidden lg:flex gap-3 absolute bottom-40 xl:bottom-32 2xl:bottom-44 left-60 xl:left-80 animate-ping ">
+          <div className="hidden lg:flex gap-3 absolute bottom-40 xl:bottom-32 2xl:bottom-44 left-60 xl:left-80 animate-ping duration-500">
             <div className="w-3 h-3 bg-green-400 rounded-full opacity-70"></div>
             <div className="w-3 h-3 bg-green-400 rounded-full opacity-70"></div>
             <div className="w-3 h-3 bg-green-400 rounded-full opacity-70"></div>
@@ -220,8 +220,8 @@ export default function HeroBanner() {
                     }}
                     onClick={() => {
                       const link = document.createElement("a");
-                      link.href = "/Yeasin-frontend_developer(resume).pdf"; // File location in the public folder
-                      link.download = "Yeasin-frontend_developer(resume).pdf"; // Filename when downloading
+                      link.href = "/Mohammad Yeasin -Frontend developer(Resume).pdf"; // File location in the public folder
+                      link.download = "Mohammad Yeasin -Frontend developer(Resume).pdf"; // Filename when downloading
                       link.click();
                     }}
                     className="md:!text-lg !normal-case !rounded-lg !bg-black/50  hover:!border-white/50 !transition-colors !duration-300"
