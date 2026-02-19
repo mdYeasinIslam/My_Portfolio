@@ -93,24 +93,22 @@ export const DetailsProject = ({ handleClose, project }: Prop) => {
       </DialogActions>
     </Dialog> */}
       <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-        <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="bg-slate-900 rounded-2xl max-w-4xl w-full max-h-[95vh] overflow-y-auto scrollbar-hide">
           {/* Modal Header */}
-          <div className="flex items-center justify-between px-6 py-1 border-b">
-            <h3 className="text-2xl font-bold text-gray-900">
-              Project details
-            </h3>
+          <div className="flex items-center justify-between px-6 pt-5 ">
+            <h3 className="text-2xl font-bold">Project details</h3>
             <button
               onClick={handleClose}
-              className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors"
+              className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-slate-600 transition-colors "
             >
-              <BiX className="w-5 h-5" />
+              <BiX className="w-7 h-7" />
             </button>
           </div>
 
           {/* Modal Content */}
           <div className="grid md:grid-cols-2 gap-8 p-6">
             {/* Product Image */}
-            <div className="max-h-[590px] h-full overflow-y-auto">
+            <div className="max-h-[500px] h-full overflow-y-auto scrollbar-hide">
               <Image
                 src={project.image || "/placeholder.svg"}
                 alt={project.title}
@@ -121,30 +119,39 @@ export const DetailsProject = ({ handleClose, project }: Prop) => {
             </div>
             <aside className="space-y-1">
               <h1 className="font-semibold">
-                <span className="font-medium">Project Name:</span> {project?.title}
+                <span className="font-medium">Project Name: </span>{" "}
+                <span className="bg-[#0d3857] px-2 py-0.5 rounded">{project?.title}</span>
               </h1>
               {/* Description */}
               <div>
                 <h1 className="font-medium">About :</h1>
 
-                <p className="text-lg text-gray-600">{project?.description}</p>
+                <p className="text-base text-white/60">
+                  {project?.description}
+                </p>
               </div>
-              <div>
+              <div className="py-2">
                 <h1 className="font-medium">Technology :</h1>
-                <ul className="  pl-5 text-base">
+                <div className="flex flex-wrap gap-1 mt-1">
                   {project?.technology?.map((c, id) => (
-                    <li key={id} className="list-disc">
+                    <div
+                      key={id}
+                      className="px-2 py-0.5 bg-[#0d3857] text-[#fff] rounded-full text-sm font-semibold"
+                    >
                       {c}
-                    </li>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
               {/* Features */}
               <div>
-                <h4 className="font-medium text-gray-900">Key Features:</h4>
+                <h4 className="font-medium ">Key Features:</h4>
                 <ul className="pl-5 text base">
                   {project?.features?.map((feature, index) => (
-                    <li key={index} className=" list-disc text-lg">
+                    <li
+                      key={index}
+                      className=" list-disc text-base text-white/60"
+                    >
                       {feature}
                     </li>
                   ))}
