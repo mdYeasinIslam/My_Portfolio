@@ -70,8 +70,8 @@ export const Navbar = () => {
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Yeasin-frontend_developer(resume).pdf";
-    link.download = "Yeasin-frontend_developer(resume).pdf";
+    link.href = "/Mohammad Yeasin -Frontend developer(Resume).pdf";
+    link.download = "Mohammad Yeasin -Frontend developer(Resume).pdf";
     link.click();
   };
 
