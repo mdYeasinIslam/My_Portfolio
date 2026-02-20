@@ -114,7 +114,7 @@ export const DetailsProject = ({ handleClose, project }: Prop) => {
                 alt={project.title}
                 width={500}
                 height={500}
-                className="w-full  h-auto rounded-lg"
+                className="w-full  h-auto rounded-lg "
               />
             </div>
             <aside className="space-y-1">
