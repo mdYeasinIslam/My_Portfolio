@@ -17,7 +17,7 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
   };
   return (
     <div className=" lg:flex gap-5 p-3 bg-white/10 rounded-lg shadow-lg ">
-      <div className="group w-full h-[200px]  lg:h-[300px] overflow-hidden hover:overflow-y-scroll">
+      <div className="group w-full h-[200px]  lg:h-[300px] overflow-y-scroll scrollbar-hide">
         <Image
           src={project.image}
           alt={project.title}
