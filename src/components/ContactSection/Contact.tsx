@@ -1,15 +1,14 @@
 "use client";
+import emailjs from "@emailjs/browser";
+import { TextField } from "@mui/material";
+import { motion } from "framer-motion";
+import Link from "next/link";
 import { FormEvent, useRef, useState } from "react";
 import toast from "react-hot-toast";
-import emailjs from "@emailjs/browser";
-import { SiGithub } from "react-icons/si";
-import Link from "next/link";
-import { Input } from "@mui/material";
-import { title } from "framer-motion/client";
+import { BsStars } from "react-icons/bs";
 import { FiLinkedin, FiPhone } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsStars } from "react-icons/bs";
-import { motion } from "framer-motion";
+import { SiGithub } from "react-icons/si";
 
 interface ContactInfo {
   title: string;
@@ -244,25 +243,56 @@ const Contact = () => {
               ref={form}
               className="max-w-lg mx-auto space-y-3"
             >
-              <Input
-                type="email"
-                name="email"
+              <TextField
+              type="email"
+              name="email"
+              label="Email"
                 placeholder="Your Email"
-                className="w-full p-2 rounded-md border !text-white bg-black/50 "
-                required
+                className="!border-[0.5px]"
+              required
+              sx={{
+                width: "100%",
+                "& .MuiOutlinedInput-root": {
+                color: "white",
+                "& fieldset": {
+                  // border:'0.5px solid white',
+                  border:'1px solid rgb(34, 197, 94)',
+                  // borderColor: "rgb(34, 197, 94)",
+                },
+                "&:hover fieldset": {
+                  borderColor: "rgb(34, 197, 94)",
+                },
+                "&.Mui-focused fieldset": {
+                  borderColor: "rgb(34, 197, 94)",
+                },
+                },
+                "& .MuiOutlinedInput-input::placeholder": {
+                color: "white",
+                opacity: 1,
+                },
+                "& .MuiInputBase-input": {
+                color: "white",
+                },
+                "& .MuiInputLabel-root": {
+                color: "white",
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                color: "white",
+                },
+              }}
               />
               <textarea
-                rows={5}
-                name="message"
-                placeholder="Write your message here..."
-                className="w-full text-base bg-black/50 text-white p-2 rounded-md mb-4 resize-none focus:ring-slate-700 border"
-                required
+              rows={5}
+              name="message"
+              placeholder="Write your message here..."
+              className="w-full text-base bg-black/0 text-white p-2 rounded-md mb-4 resize-none border border-green-700 focus:outline-none focus:!ring-[0.5px] focus:ring-green-500 focus:border-green-500"
+              required
               ></textarea>
               <button
-                type="submit"
-                className="hover:bg-black/50 text-lg text-white font-semibold px-6 py-2 rounded-md border border-white/30  transition"
+              type="submit"
+              className="px-5 py-2 text-base relative shadow-lg font-medium before:absolute before:top-0 before:left-0 before:w-0 before:h-0 before:border-l-[4px] before:border-t-[4px] before:border-transparent dark:bg-slate-800 dark:text-white hover:before:w-full hover:before:h-full hover:before:border-green-700 hover:before:transition-all hover:before:duration-500 after:border-r-[4px] after:border-b-[4px] after:border-transparent hover:after:border-green-700 after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0 hover:after:w-full hover:after:h-full hover:after:transition-all hover:after:duration-500"
               >
-                Send Email
+              Send Email
               </button>
             </form>
           </div>
