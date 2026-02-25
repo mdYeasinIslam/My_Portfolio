@@ -1,7 +1,7 @@
-import React from 'react'
-import { FaRegCalendarAlt } from 'react-icons/fa';
-import { FaLaptopCode } from 'react-icons/fa6';
-import { GrLanguage } from 'react-icons/gr';
+import React from "react";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa6";
+import { GrLanguage } from "react-icons/gr";
 import { SlLocationPin } from "react-icons/sl";
 
 const AboutCards = () => {
@@ -41,22 +41,28 @@ const AboutCards = () => {
             <div
               key={index}
               // className="p-2 lg:p-4 xl:p-6 rounded-xl md:rounded-2xl border border-gray-200 shadow-sm hover:shadow transition bg-gradient-to-r from-white to-[#faeef6]"
-              className="p-2 lg:p-4 xl:p-6 rounded-xl md:rounded-2xl border border-gray-200  transition bg-[#0F172A]"
+              className="aboutCard p-2 lg:p-4 xl:p-1 "
             >
               <div
-                className="w-12 h-12 flex items-center justify-center rounded-xl mb-4"
-                style={{ backgroundColor: card.bgColor }}
+                key={index}
+                // className="p-2 lg:p-4 xl:p-6 rounded-xl md:rounded-2xl border border-gray-200 shadow-sm hover:shadow transition bg-gradient-to-r from-white to-[#faeef6]"
+                className="h-full w-full rounded-xl md:rounded-2xl   transition bg-[#0F172A] p-2 lg:p-4 xl:p-6 z-10"
               >
-                <Icon className="w-6 h-6 text-black" />
+                <div
+                  className="w-12 h-12 flex items-center justify-center rounded-xl mb-4"
+                  style={{ backgroundColor: card.bgColor }}
+                >
+                  <Icon className="w-6 h-6 text-black" />
+                </div>
+                <h3 className="text-lg font-semibold ">{card.title}</h3>
+                <p className="text-sm ">{card.subtitle}</p>
               </div>
-              <h3 className="text-lg font-semibold ">{card.title}</h3>
-              <p className="text-sm ">{card.subtitle}</p>
             </div>
           );
         })}
       </div>
     </div>
   );
-}
+};
 
-export default AboutCards
+export default AboutCards;
