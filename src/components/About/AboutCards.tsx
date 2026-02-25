@@ -41,7 +41,7 @@ const AboutCards = () => {
             <div
               key={index}
               // className="p-2 lg:p-4 xl:p-6 rounded-xl md:rounded-2xl border border-gray-200 shadow-sm hover:shadow transition bg-gradient-to-r from-white to-[#faeef6]"
-              className="aboutCard p-2 lg:p-4 xl:p-1 "
+              className="aboutCard h-[154px] before:w-[100px] before:h-[300%] p-2 lg:p-4 xl:p-1 "
             >
               <div
                 key={index}

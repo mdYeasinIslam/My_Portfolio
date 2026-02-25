@@ -12,26 +12,8 @@ interface PropType {
 export default function SkillsCard({ skill }: PropType) {
   return (
     <>
-      <motion.div
-        className="bg-[#0F172A] p-0.5 rounded shadow-md  hover:scale-105 duration-300 transition-transform "
-        style={{
-          background: "#0F172A",
-          borderRadius: "0.5rem",
-          border: "2px solid transparent",
-          backgroundImage: `conic-gradient(from 0deg at 50% 50%, #87ceeb, #1e40af, #0F172A, #1e40af, #87ceeb, #87ceeb)`,
-          backgroundSize: "300% 300%",
-        }}
-        animate={{
-          backgroundPosition: ["0% 0%", "300% 300%"],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: "linear",
-          repeatType: "loop",
-        }}
-      >
-        <div className="w-full h-full flex items-center gap-2 bg-black p-2 lg:p-4">
+      <motion.div className="aboutCard before:w-[30px] before:h-[900%] bg-transparent p-0.5 rounded shadow-md  hover:scale-105 duration-300 transition-transform ">
+        <div className="w-full h-full  flex items-center gap-2 p-2 lg:p-4 z-10">
           <div>{skill?.icon}</div>
           <h1 className="text-sm md:text-lg font-bold">{skill.name}</h1>
         </div>

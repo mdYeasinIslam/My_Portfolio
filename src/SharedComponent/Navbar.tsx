@@ -136,7 +136,7 @@ export const Navbar = () => {
         <button
           title="Download My Resume"
           onClick={handleResumeDownload}
-          className="text-white text-sm md:text-base font-semibold bg-transparent hover:bg-black/90 border border-white/40 py-1  px-3 md:py-2 rounded-lg duration-300 "
+          className="text-white text-sm md:text-base font-semibold bg-transparent hover:bg-black/90 border border-[--primary-color-700] py-1  px-3 md:py-2 rounded-lg duration-300 "
         >
           Get Resume
         </button>

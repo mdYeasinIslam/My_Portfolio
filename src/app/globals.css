@@ -30,14 +30,14 @@ html {
 /* From Uiverse.io by bhaveshxrawat */ 
 .aboutCard {
   /* width: 290px; */
-  height: 154px;
+  /* height: 154px; */
   background: #07182E;
   position: relative;
   display: flex;
   place-content: center;
   place-items: center;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 16px;
 }
 
 
@@ -45,11 +45,11 @@ html {
 .aboutCard::before {
   content: '';
   position: absolute;
-  width: 100px;
+  /* width: 100px; */
   background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
-  height: 300%;
+  /* height: 300%; */
   animation: rotBGimg 3s linear infinite;
-  transition: all 0.2s linear;
+  transition: all 1s linear;
 }
 
 @keyframes rotBGimg {
@@ -58,7 +58,7 @@ html {
   }
 
   to {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -66,7 +66,6 @@ html {
   content: '';
   position: absolute;
   background: #07182E;
-  ;
   inset: 5px;
   border-radius: 15px;
 }  
