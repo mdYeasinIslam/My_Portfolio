@@ -59,7 +59,7 @@ export const About = () => {
           {/* Button Group */}
           <div className="flex gap-5 md:gap-4 ">
             <Link to="Contact" smooth={true} duration={500}>
-              <button className="text-sm md:text-lg  text-white bg-transparent hover:bg-black/90 border border-white/40 font-semibold  px-5 py-1.5 rounded-lg ">
+              <button className="text-sm md:text-lg  text-white bg-transparent hover:bg-black/90 border border-[--primary-color-700] font-semibold  px-5 py-1.5 rounded-lg ">
                 Contact Me
               </button>
             </Link>

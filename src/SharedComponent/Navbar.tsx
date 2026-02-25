@@ -78,7 +78,7 @@ export const Navbar = () => {
   return (
     <nav
       // className="w-full fixed mx-auto z-10 flex items-center justify-between py-4 px-2 bg-gradient-to-r text-black from-green-100 via-blue-50 to-pink-50"
-      className="w-full fixed mx-auto z-10 flex items-center justify-between py-3 px-4  text-white bg-slate-800/40 backdrop-blur-md  border-[0.5px] border-white/20 transition-colors duration-300 shadow-lg "
+      className="w-full fixed mx-auto flex items-center justify-between py-3 px-4  text-white bg-slate-800/40 backdrop-blur-md  border-[0.5px] border-white/20 transition-colors duration-300 shadow-lg z-20"
     >
       {/* Mobile device */}
       <Box className="flex items-center gap-2">
@@ -136,7 +136,7 @@ export const Navbar = () => {
         <button
           title="Download My Resume"
           onClick={handleResumeDownload}
-          className="text-white text-sm md:text-base font-semibold bg-transparent hover:bg-black/90 border border-white/40 py-1  px-3 md:py-2 rounded-lg duration-300 "
+          className="text-white text-sm md:text-base font-semibold bg-transparent hover:bg-black/90 border border-[--primary-color-700] py-1  px-3 md:py-2 rounded-lg duration-300 "
         >
           Get Resume
         </button>

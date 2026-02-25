@@ -185,7 +185,7 @@ const Projects = () => {
           <span className="w-20 md:w-28 lg:w-40 border"></span>
         </h1>
 
-        <div className=" grid grid-cols-1 md:grid-cols-2 items-center lg:grid-cols-2 gap-6 ">
+        <div className=" grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 items-center gap-6 ">
           {projects.map((project, index) => (
             <DisplayProjects key={index} project={project} />
           ))}
