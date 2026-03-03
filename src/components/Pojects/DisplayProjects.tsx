@@ -55,16 +55,16 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
-    const [wishlistVisible, setWishlistVisible] = useState(false);
-    const [compareVisible, setCompareVisible] = useState(false);
-    const [quickViewVisible, setQuickViewVisible] = useState(false);
+  const [wishlistVisible, setWishlistVisible] = useState(false);
+  const [compareVisible, setCompareVisible] = useState(false);
+  const [quickViewVisible, setQuickViewVisible] = useState(false);
 
-    const [rating, setRating] = useState(5);
+  const [rating, setRating] = useState(5);
 
   return (
     <motion.div
       ref={cardRef}
-      className="gap-5 bg-white/10 rounded-lg shadow-lg overflow-hidden cursor-pointer"
+      className="gap-5 bg-white/10 rounded-lg shadow-lg overflow-hidden"
       animate={{
         x: position.x,
         y: position.y,
@@ -91,70 +91,68 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
           className="w-full  duration-300"
         />
         {/* action button */}
-        <div>
-          <div className="absolute bg-[rgb(0,0,0,0.3)] z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 bottom-0 left-0 flex items-center justify-center w-full h-full">
-            <div className="flex items-center gap-[15px] justify-center">
-              <div
-                onMouseOver={() => setWishlistVisible(true)}
-                onMouseOut={() => setWishlistVisible(false)}
-                className="relative w-max group-hover:translate-y-0 translate-y-[50px] transition-all opacity-0 group-hover:opacity-100 duration-300"
+        <div className="absolute bg-[rgb(0,0,0,0.3)] opacity-0 group-hover:opacity-100 transition-all duration-300 bottom-0 left-0 flex items-center justify-center w-full h-full z-10 ">
+          <div className="flex items-center gap-[15px] justify-center">
+            <div
+              onMouseOver={() => setWishlistVisible(true)}
+              onMouseOut={() => setWishlistVisible(false)}
+              className="relative w-max group-hover:translate-y-0 translate-y-[50px] transition-all opacity-0 group-hover:opacity-100 duration-300"
+            >
+              <p className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer">
+                <IoMdHeartEmpty className="text-[1.3rem]" />
+              </p>
+
+              {/* tooltip */}
+              <p
+                className={`${wishlistVisible ? "opacity-100 z-[100] translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-50px] transform translate-x-[-50%] left-[50%] w-max py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}
               >
-                <p className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer">
-                  <IoMdHeartEmpty className="text-[1.3rem]" />
-                </p>
+                Wishlist
+                {/* arrow */}
+                <span className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute left-[50%] transform translate-x-[-50%] bottom-[-10%]"></span>
+              </p>
+            </div>
 
-                {/* tooltip */}
-                <p
-                  className={`${wishlistVisible ? "opacity-100 z-[100] translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-50px] transform translate-x-[-50%] left-[50%] w-max py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}
-                >
-                  Wishlist
-                  {/* arrow */}
-                  <span className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute left-[50%] transform translate-x-[-50%] bottom-[-10%]"></span>
-                </p>
-              </div>
+            <div
+              onMouseOver={() => setCompareVisible(true)}
+              onMouseOut={() => setCompareVisible(false)}
+              className="relative w-max group-hover:translate-y-0 transition-all duration-500 opacity-0 group-hover:opacity-100 translate-y-[80px]"
+            >
+              <p className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer">
+                <HiArrowsUpDown className="text-[1.3rem]" />
+              </p>
 
-              <div
-                onMouseOver={() => setCompareVisible(true)}
-                onMouseOut={() => setCompareVisible(false)}
-                className="relative w-max group-hover:translate-y-0 transition-all duration-500 opacity-0 group-hover:opacity-100 translate-y-[80px]"
+              {/* tooltip */}
+              <p
+                className={`${compareVisible ? "opacity-100 z-[100] translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-50px] transform translate-x-[-50%] left-[50%] w-max py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}
               >
-                <p className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer">
-                  <HiArrowsUpDown className="text-[1.3rem]" />
-                </p>
+                Compare
+                {/* arrow */}
+                <span className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute left-[50%] transform translate-x-[-50%] bottom-[-10%]"></span>
+              </p>
+            </div>
 
-                {/* tooltip */}
-                <p
-                  className={`${compareVisible ? "opacity-100 z-[100] translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-50px] transform translate-x-[-50%] left-[50%] w-max py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}
-                >
-                  Compare
-                  {/* arrow */}
-                  <span className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute left-[50%] transform translate-x-[-50%] bottom-[-10%]"></span>
-                </p>
-              </div>
+            <div
+              onMouseOver={() => setQuickViewVisible(true)}
+              onMouseOut={() => setQuickViewVisible(false)}
+              className="relative w-max group-hover:translate-y-0 transition-all duration-700 opacity-0 group-hover:opacity-100 translate-y-[110px]"
+            >
+              <p className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer">
+                <IoEyeOutline className="text-[1.3rem]" />
+              </p>
 
-              <div
-                onMouseOver={() => setQuickViewVisible(true)}
-                onMouseOut={() => setQuickViewVisible(false)}
-                className="relative w-max group-hover:translate-y-0 transition-all duration-700 opacity-0 group-hover:opacity-100 translate-y-[110px]"
+              {/* tooltip */}
+              <p
+                className={`${quickViewVisible ? "opacity-100 z-[100] translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-50px] transform translate-x-[-50%] left-[50%] w-max py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}
               >
-                <p className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer">
-                  <IoEyeOutline className="text-[1.3rem]" />
-                </p>
-
-                {/* tooltip */}
-                <p
-                  className={`${quickViewVisible ? "opacity-100 z-[100] translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-50px] transform translate-x-[-50%] left-[50%] w-max py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}
-                >
-                  Quick View
-                  {/* arrow */}
-                  <span className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute left-[50%] transform translate-x-[-50%] bottom-[-10%]"></span>
-                </p>
-              </div>
+                Quick View
+                {/* arrow */}
+                <span className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute left-[50%] transform translate-x-[-50%] bottom-[-10%]"></span>
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col gap-2 justify-between p-3">
+      <div className="relative w-full flex flex-col gap-2 justify-between p-3  z-20">
         <div>
           <h2 className="text-xl font-semibold uppercase">{project.title}</h2>
           <p className="text-sm pt-2 line-clamp-3">{project?.description}</p>
