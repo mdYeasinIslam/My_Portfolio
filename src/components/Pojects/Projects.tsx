@@ -38,45 +38,42 @@ const projects: ProjectType[] = [
     liveSite: "https://asset-pulse-system.netlify.app/",
     github: "https://github.com/mdYeasinIslam/asset-management-system",
   },
+
   {
     id: 2,
-    title: "BareBlog",
+    title: "Adventa",
     description:
-      "This site is build for collecting Blogs about Technology. User can share their option or can share their experience about different technology and it will publish as a blog. User can control his/her blog",
-    image: "/project/bareblog.png", // Replace with your image URL
+      "This site provides tourism places related support.People can see details about top tourist places of Bangladesh and can buy packages.Also user can add their favourite tourist places. People can give their opinion about tourist area",
+    image: "/project/adventa.png", // Replace with your image URL
     features: [
-      "Homepage displays a banner, top blogs, and author details",
-      "Users can add new blogs",
-      "can view and manage their own blogs",
-      "can add blogs to their wishlists",
-      "Dark mode supports for better user experience",
+      "Top tourist places details of Bangladesh",
+      "Can buy tour packages ",
+      "People can add their favorite tourist area with details",
+      "Everyone can give their opinion on each tourist place",
+      "User can see reviews on each place",
     ],
     technology: [
       "HTML5 & CSS",
-      "Tailwind css & Meterial UI",
-      "React & react-router-dom",
-      "Typescript",
+      "Tailwind css & Daiysi UI",
+      "React.js & react-router-dom",
       "Node.js",
       "Express.js",
       "Mongodb",
     ],
-
     challenges: [
-      "Design related difficulty",
-      "Type related error because of using Typescript",
-      "Dark mode implementation",
-      'Data show in tabular formate by using "Tanstck table" ',
-      "Search and filter functionality implementation in server-side",
+      "Collect accurate data of each place",
+      "Collection of reviews from user",
     ],
     future_plan: [
-      "Optimize performance",
-      "Add some purchasable packages",
-      "Implement payment method",
-      "Security inhance such as axios interceptor",
+      "Converting React.js to the React.ts",
+      "Inhance security system such as JWT, axios interceptor",
+      "Payment method implementation",
+      "Finally,providing real time services",
     ],
-    liveSite: "https://a11-bareblog.web.app/",
-    github: "https://github.com/mdYeasinIslam/Bare-Blog-client",
+    liveSite: "https://adventa-client.vercel.app/",
+    github: "https://github.com/mdYeasinIslam/service-review-client-",
   },
+
   // {
   //   id:3,
   //   title: "ReviewXP",
@@ -126,21 +123,45 @@ const projects: ProjectType[] = [
     liveSite: "https://practice-firebase-58.web.app/category/1",
     github: "https://github.com/mdYeasinIslam/Offer-haven-A9",
   },
+  {
+    id: 5,
+    title: "BareBlog",
+    description:
+      "This site is build for collecting Blogs about Technology. User can share their option or can share their experience about different technology and it will publish as a blog. User can control his/her blog",
+    image: "/project/bareblog.png", // Replace with your image URL
+    features: [
+      "Homepage displays a banner, top blogs, and author details",
+      "Users can add new blogs",
+      "can view and manage their own blogs",
+      "can add blogs to their wishlists",
+      "Dark mode supports for better user experience",
+    ],
+    technology: [
+      "HTML5 & CSS",
+      "Tailwind css & Meterial UI",
+      "React & react-router-dom",
+      "Typescript",
+      "Node.js",
+      "Express.js",
+      "Mongodb",
+    ],
 
-  // {
-  //   id:5,
-  //   title: "Adventa",
-  //   description: "This site provides tourism places related support.People can see details about top tourist places of Bangladesh and can buy packages.Also user can add their favourite tourist places. People can give their opinion about tourist area",
-  //   image: "/project/adventa.png", // Replace with your image URL
-  //   features: ["Top tourist places details of Bangladesh",'Can buy tour packages ', "People can add their favorite tourist area with details", "Everyone can give their opinion on each tourist place",'User can see reviews on each place'],
-  //    technology: ['HTML5 & CSS', 'Tailwind css & Daiysi UI', 'React.js & react-router-dom', 'Node.js', 'Express.js', 'Mongodb'],
-  //   challenges:['Collect accurate data of each place','Collection of reviews from user'],
-  //   future_plan:['Converting React.js to the React.ts','Inhance security system such as JWT, axios interceptor','Payment method implementation','Finally,providing real time services'],
-  //   liveSite: 'https://655b09c18ad8c550c822db8b--aquamarine-mochi-76b629.netlify.app/',
-  //   github:'https://github.com/mdYeasinIslam/service-review-client-'
-
-  // },
-
+    challenges: [
+      "Design related difficulty",
+      "Type related error because of using Typescript",
+      "Dark mode implementation",
+      'Data show in tabular formate by using "Tanstck table" ',
+      "Search and filter functionality implementation in server-side",
+    ],
+    future_plan: [
+      "Optimize performance",
+      "Add some purchasable packages",
+      "Implement payment method",
+      "Security inhance such as axios interceptor",
+    ],
+    liveSite: "https://a11-bareblog.web.app/",
+    github: "https://github.com/mdYeasinIslam/Bare-Blog-client",
+  },
   {
     id: 6,
     title: "To-Do Field",

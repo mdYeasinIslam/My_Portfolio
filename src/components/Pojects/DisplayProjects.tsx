@@ -8,6 +8,9 @@ import { motion } from "framer-motion";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { HiArrowsUpDown } from "react-icons/hi2";
 import { IoEyeOutline } from "react-icons/io5";
+import { GitHub } from "@mui/icons-material";
+import { BsGithub } from "react-icons/bs";
+import { MdDetails } from "react-icons/md";
 
 export const DisplayProjects = ({ project }: { project: ProjectType }) => {
   const cardRef = useRef(null);
@@ -65,19 +68,19 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
     <motion.div
       ref={cardRef}
       className="gap-5 bg-white/10 rounded-lg shadow-lg overflow-hidden"
-      animate={{
-        x: position.x,
-        y: position.y,
-        rotateX: position.y * rotationFactor,
-        rotateY: position.x * -rotationFactor,
-        scale: isHovered ? scaleFactor : 1,
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 400,
-        damping: 25,
-        mass: 1,
-      }}
+      // animate={{
+      //   x: position.x,
+      //   y: position.y,
+      //   rotateX: position.y * rotationFactor,
+      //   rotateY: position.x * -rotationFactor,
+      //   scale: isHovered ? scaleFactor : 1,
+      // }}
+      // transition={{
+      //   type: "spring",
+      //   stiffness: 400,
+      //   damping: 25,
+      //   mass: 1,
+      // }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
@@ -98,15 +101,17 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
               onMouseOut={() => setWishlistVisible(false)}
               className="relative w-max group-hover:translate-y-0 translate-y-[50px] transition-all opacity-0 group-hover:opacity-100 duration-300"
             >
-              <p className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer">
-                <IoMdHeartEmpty className="text-[1.3rem]" />
-              </p>
+              <Link target="_blank" href={project.github} className="w-full">
+                <p className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer">
+                  <BsGithub className="text-[1.3rem]" />
+                </p>
+              </Link>
 
               {/* tooltip */}
               <p
                 className={`${wishlistVisible ? "opacity-100 z-[100] translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-50px] transform translate-x-[-50%] left-[50%] w-max py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}
               >
-                Wishlist
+                Github link
                 {/* arrow */}
                 <span className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute left-[50%] transform translate-x-[-50%] bottom-[-10%]"></span>
               </p>
@@ -117,15 +122,17 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
               onMouseOut={() => setCompareVisible(false)}
               className="relative w-max group-hover:translate-y-0 transition-all duration-500 opacity-0 group-hover:opacity-100 translate-y-[80px]"
             >
-              <p className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer">
-                <HiArrowsUpDown className="text-[1.3rem]" />
-              </p>
+              <Link target="_blank" href={project.liveSite} className="w-full">
+                <p className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer">
+                  <IoEyeOutline className="text-[1.3rem]" />
+                </p>
+              </Link>
 
               {/* tooltip */}
               <p
                 className={`${compareVisible ? "opacity-100 z-[100] translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-50px] transform translate-x-[-50%] left-[50%] w-max py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}
               >
-                Compare
+                Live Preview
                 {/* arrow */}
                 <span className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute left-[50%] transform translate-x-[-50%] bottom-[-10%]"></span>
               </p>
@@ -136,15 +143,18 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
               onMouseOut={() => setQuickViewVisible(false)}
               className="relative w-max group-hover:translate-y-0 transition-all duration-700 opacity-0 group-hover:opacity-100 translate-y-[110px]"
             >
-              <p className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer">
-                <IoEyeOutline className="text-[1.3rem]" />
-              </p>
+              <button
+                onClick={handleClickOpen}
+                className="rounded-full bg-white p-2 hover:bg-[#07182E]/90 text-black hover:text-white transition-all duration-200 cursor-pointer"
+              >
+                <MdDetails className="text-[1.3rem]" />
+              </button>
 
               {/* tooltip */}
               <p
                 className={`${quickViewVisible ? "opacity-100 z-[100] translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-50px] transform translate-x-[-50%] left-[50%] w-max py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}
               >
-                Quick View
+                 View Details
                 {/* arrow */}
                 <span className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute left-[50%] transform translate-x-[-50%] bottom-[-10%]"></span>
               </p>
@@ -157,7 +167,7 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
           <h2 className="text-xl font-semibold uppercase">{project.title}</h2>
           <p className="text-sm pt-2 line-clamp-3">{project?.description}</p>
         </div>
-        <div className="flex flex-col gap-2">
+        {/* <div className="flex flex-col gap-2">
           <div className="flex flex-col xl:flex-row gap-2 w-full">
             <Link target="_blank" href={project.liveSite} className="w-full">
               <button className="w-full py-1 bg-[var(--primary-color-900)] font-medium rounded-md text-white text-base cursor-pointer border border-transparent hover:border-white/50">
@@ -176,7 +186,7 @@ export const DisplayProjects = ({ project }: { project: ProjectType }) => {
           >
             View Details
           </button>
-        </div>
+        </div> */}
       </div>
       <motion.div
         className="absolute inset-0 rounded-lg"
